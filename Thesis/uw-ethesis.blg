@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: uw-ethesis.aux
+A level-1 auxiliary file: chap1.aux
+A level-1 auxiliary file: chap2.aux
+A level-1 auxiliary file: chap3.aux
+A level-1 auxiliary file: chap4.aux
+The style file: plain.bst
+Database file #1: ../library.bib
+Warning--can't use both volume and number fields in Emerson1999
+Warning--empty publisher in Emerson1999
+Warning--empty year in Jochem
+Warning--there's a number but no volume in Karaman2009
+Warning--there's a number but no volume in Lee2010
+Warning--there's a number but no volume in Richter2013
+You've used 35 entries,
+            2118 wiz_defined-function locations,
+            726 strings with 10179 characters,
+and the built_in function-call counts, 12298 in all, are:
+= -- 1268
+> -- 491
+< -- 14
++ -- 193
+- -- 158
+* -- 818
+:= -- 1972
+add.period$ -- 105
+call.type$ -- 35
+change.case$ -- 180
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 503
+empty$ -- 951
+format.name$ -- 158
+if$ -- 2623
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 38
+newline$ -- 178
+num.names$ -- 70
+pop$ -- 183
+preamble$ -- 1
+purify$ -- 149
+quote$ -- 0
+skip$ -- 387
+stack$ -- 0
+substring$ -- 895
+swap$ -- 148
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 132
+warning$ -- 6
+while$ -- 132
+width$ -- 37
+write$ -- 383
+(There were 6 warnings)

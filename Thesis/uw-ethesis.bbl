@@ -1,0 +1,220 @@
+\begin{thebibliography}{10}
+
+\bibitem{Allen2016}
+Ross Allen and Marco Pavone.
+\newblock {A Real-Time Framework for Kinodynamic Planning with Application to
+  Quadrotor Obstacle Avoidance}.
+\newblock {\em {\{}AIAA{\}} Conf. on Guidance, Navigation and Control}, pages
+  1--18, 2016.
+
+\bibitem{Ayala2013}
+A.~I.~Medina Ayala, S.~B. Andersson, and C.~Belta.
+\newblock {Temporal logic motion planning in unknown environments}.
+\newblock {\em 2013 IEEE/RSJ International Conference on Intelligent Robots and
+  Systems}, pages 5279--5284, 2013.
+
+\bibitem{Bhatia2010}
+Amit Bhatia, Lydia~E. Kavraki, and Moshe~Y. Vardi.
+\newblock {Sampling-based motion planning with temporal goals}.
+\newblock {\em Proceedings - IEEE International Conference on Robotics and
+  Automation}, pages 2689--2696, 2010.
+
+\bibitem{Emerson1991}
+E.~Allen Emerson and Charanjit~S. Jutla.
+\newblock {Tree automata, mu-calculus and determinacy}.
+\newblock {\em [1991] Proceedings 32nd Annual Symposium of Foundations of
+  Computer Science}, pages 368--377, 1991.
+
+\bibitem{Emerson1999}
+E.~Allen Emerson, Charanjit~S. Jutla, and A.~Prasad Sistla.
+\newblock {\em {On model checking for the $\mu$-calculus and its fragments}},
+  volume 258.
+\newblock 1999.
+
+\bibitem{Greeff2018}
+Melissa Greeff and Angela~P. Schoellig.
+\newblock {Model Predictive Path-Following for Constrained Differentially Flat
+  Systems}.
+\newblock In {\em IEEE International Conference on Robotics and Automation},
+  Brisbane, Australia, 2018.
+
+\bibitem{Gurfinkel2004}
+Arie Gurfinkel and Marsha Chechik.
+\newblock {Extending extended vacuity}.
+\newblock {\em Formal Methods in Computer-Aided Design}, pages 306--321, 2004.
+
+\bibitem{Indyk1998}
+Piotr Indyk and Rajeev Motwd.
+\newblock {Approximate Nearest Neighbors: Towards Removing the Curse of
+  Dimensionality}.
+\newblock {\em Proceedings of the thirtieth annual ACM symposium on Theory of
+  computing. ACM}, pages 604--613, 1998.
+
+\bibitem{SAEinternational2016}
+SAE international.
+\newblock {U.S. Department of Transportation's New Policy on Automated Vehicles
+  Adopts SAE International's Levels of Automation for Defining Driving
+  Automation in On-Road Motor Vehicles}.
+\newblock {\em SAE international}, page~1, 2016.
+
+\bibitem{Janson2015}
+Lucas Janson, Edward Schmerling, Ashley Clark, and Marco Pavone.
+\newblock {Fast marching tree: A fast marching sampling-based method for
+  optimal motion planning in many dimensions}.
+\newblock {\em International Journal of Robotics Research}, 34(7):883--921,
+  2015.
+
+\bibitem{jaulin2001}
+Luc Jaulin, Michel Kieffer, Olivier Didrit, and {\'{E}}ric Walter.
+\newblock {\em {Applied Interval Analysis}}.
+\newblock Springer London, London, 2001.
+
+\bibitem{Jochem}
+T.~Jochem, D.~Pomerleau, B.~Kumar, and J.~Armstrong.
+\newblock {PANS: a portable navigation platform}.
+\newblock {\em Proceedings of the Intelligent Vehicles '95 Symposium}, pages
+  107--112.
+
+\bibitem{Karaman2009}
+Sertac Karaman and Emilio Frazzoli.
+\newblock {Sampling-based motion planning with deterministic mu-calculus
+  specifications}.
+\newblock {\em Proceedings of the 48th IEEE Conference on Decision and Control
+  (CDC) held jointly with 2009 28th Chinese Control Conference},
+  (0):2222--2229, 2009.
+
+\bibitem{Karaman2011}
+Sertac Karaman and Emilio Frazzoli.
+\newblock {Sampling-based algorithms for optimal motion planning}.
+\newblock {\em The International Journal of Robotics Research}, 30(7):846--894,
+  2011.
+
+\bibitem{Karaman2012}
+Sertac Karaman and Emilio Frazzoli.
+\newblock {Sampling-based algorithms for optimal motion planning with
+  deterministic mu-calculus specifications}.
+\newblock {\em 2012 American Control Conference}, 2012.
+
+\bibitem{Kavraki1996}
+L.E. Kavraki, Petr Svestka, J.-C. Latombe, and M.H. Overmars.
+\newblock {Probabilistic roadmaps for path planning in
+  high-dimensionalconfiguration spaces}.
+\newblock {\em IEEE Transactions on Robotics and Automation}, 12(4):566 -- 580,
+  1996.
+
+\bibitem{Larocque2018}
+Luc Larocque and Jun Liu.
+\newblock {Sampling-Based Motion Planning with mu-Calculus Specifications
+  without Steering}.
+\newblock In {\em IEEE International Conference on Robotics and Automation},
+  Brisbane, Australia, 2018.
+
+\bibitem{LaValle2001}
+S.~M. LaValle and James~J Kuffner.
+\newblock {Randomized kinodynamic planning}.
+\newblock {\em International Journal of Robotics Research}, 20(5):378--400,
+  2001.
+
+\bibitem{LaValle2006}
+Steven~M. LaValle.
+\newblock {\em {Planning Algorithms}}.
+\newblock Cambridge University Press, 1 edition, 2006.
+
+\bibitem{Lee2010}
+Taeyoung Lee, Melvin Leok, and N.~Harris Mcclamroch.
+\newblock {Geometric Tracking Control of a Quadrotor UAV on SE ( 3 )}.
+\newblock {\em 49th IEEE Conference on Decision and Control}, (3):5420--5425,
+  2010.
+
+\bibitem{Li2016}
+Yanbo Li, Zakary Littlefield, and Kostas~E. Bekris.
+\newblock {Asymptotically optimal sampling-based kinodynamic planning}.
+\newblock {\em The International Journal of Robotics Research}, 35(5):528--564,
+  2016.
+
+\bibitem{Li2018}
+Yinan Li and Jun Liu.
+\newblock {ROCS: A Robustly Complete Control Synthesis Tool for Nonlinear
+  Dynamical Systems}.
+\newblock {\em Proceedings of the 21st International Conference on Hybrid
+  Systems: Computation and Control (part of CPS Week) - HSCC '18}, pages
+  130--135, 2018.
+
+\bibitem{Lin2014}
+Hai Lin.
+\newblock {Mission Accomplished: An Introduction to Formal Methods in Mobile
+  Robot Motion Planning and Control}.
+\newblock {\em Unmanned Systems}, 02(02):201--216, 2014.
+
+\bibitem{Lutin2013}
+Jerome~M. Lutin, Alain~L. Kornhauser, and Eva Lerner-Lam.
+\newblock {The revolutionary development of self-driving vehicles and
+  implications for the transportation engineering profession}.
+\newblock {\em ITE Journal (Institute of Transportation Engineers)},
+  83(7):28--32, 2013.
+
+\bibitem{Richter2013}
+Charles Richter, Adam Bry, and Nicholas Roy.
+\newblock {Polynomial trajectory planning for quadrotor flight}.
+\newblock {\em International Conference on Robotics and Automation},
+  (Isrr):1--16, 2013.
+
+\bibitem{Schneider2004}
+Klaus Schneider.
+\newblock {\em {Verification of Reactive Systems}}.
+\newblock Springer Science {\&} Business Media, 2004.
+
+\bibitem{Tarski1955}
+Alfred Tarski.
+\newblock {A lattice-theoretical fixpoint theorem and its applications}.
+\newblock {\em Pacific Journal of Mathematics}, 5(2):285--309, 1955.
+
+\bibitem{Tedrake2009}
+Russ Tedrake.
+\newblock {LQR-trees: Feedback motion planning on sparse randomized trees}.
+\newblock {\em Robotics: Science and Systems V}, page~8, 2009.
+
+\bibitem{Thrun2010}
+Sebastian Thrun.
+\newblock {Toward robotic cars}.
+\newblock {\em Communications of the ACM}, 53(4):99--106, 2010.
+
+\bibitem{Webb2013}
+Dustin~J. Webb and Jur {Van Den Berg}.
+\newblock {Kinodynamic RRT*: Asymptotically optimal motion planning for robots
+  with linear dynamics}.
+\newblock {\em Proceedings - IEEE International Conference on Robotics and
+  Automation}, pages 5054--5061, 2013.
+
+\bibitem{Wendel2016}
+Alexander Wendel and James Underwood.
+\newblock {Self-supervised weed detection in vegetable crops using ground based
+  hyperspectral imaging}.
+\newblock {\em 2016 IEEE International Conference on Robotics and Automation
+  (ICRA)}, pages 5128--5135, 2016.
+
+\bibitem{Wilke2001}
+Thomas Wilke.
+\newblock {Alternating tree automata, parity games, and modal µ-calculus}.
+\newblock {\em Bull. Soc. Math. Belg}, 8(2):2001, 2001.
+
+\bibitem{Wolff2014}
+Eric~M Wolff.
+\newblock {\em {Control of Dynamical Systems with Temporal Logic
+  Specifications}}.
+\newblock PhD thesis, California Institute of Technology, 2014.
+
+\bibitem{Xie2015}
+Christopher Xie, Jur van~den Berg, Sachin Patil, and Pieter Abbeel.
+\newblock {Toward Asymptotically Optimal Motion Planning for Kinodynamic
+  Systems using a Two-Point Boundary Value Problem Solver}.
+\newblock {\em IEEE International Conference on Robotics and Automation}, pages
+  4187--4194, 2015.
+
+\bibitem{Yang2013}
+Kwangjin Yang, Seng {Keat Gan}, and Salah Sukkarieh.
+\newblock {A Gaussian process-based RRT planner for the exploration of an
+  unknown and cluttered environment with a UAV}.
+\newblock {\em Advanced Robotics}, 27(6):431--443, 2013.
+
+\end{thebibliography}

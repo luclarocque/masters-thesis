@@ -1,0 +1,35 @@
+%!TEX root = uw-ethesis.tex
+% chktex-file 46 (ignore warnings about $...$)
+
+\chapter{Conclusions}\label{chap:conc}
+
+
+
+CHECKLIST:\\
+\begin{itemize}
+    \item Quadrotor Simulations (Chapter 4)
+    \item Abstracted Kripke Structures for Online Planning (Chapter 4)
+    \item Contributions (Chapter 1)
+    % \item Overview (Chapter 1)
+    \item Abstract (Front Matter)
+    \item Future Work (can move some from Chapter 3) (Chapter 5)
+    \item Formatting (especially figure positions)
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%
+% From end of SST paper chapter
+The method presented here is a novel use of SST*, a kinodynamic planning algorithm that avoids reliance on a steering function, and \mucalc{} model checking that uses an abstracted Kripke structure to determine satisfaction of deterministic \mucalc{} specifications. Construction of the abstracted Kripke structure is performed by creating multiple Kripke structures and merging the most cost-efficient solutions into one structure, and the appropriate trajectories satisfying the given specification are tracked using an LQR feedback control policy.
+
+
+%%%%%%%%%%%%%%%%%
+
+
+
+\section{Future Work}
+
+Schoellig et al.\ at the University of Toronto tend to focus on path-following rather than trajectory tracking.
+
+This research opens many avenues for future work. Investigation into other types of feedback controllers may help to improve tracking when applying the \gls{sst} method from \autoref{chap:sstpaper}, especially for nonlinear systems. Tracking also poses a problem for collision avoidance, since despite guaranteeing a collision-free trajectory with an appropriate \mucalc{} specification, tracking errors may yet cause collisions. This issue is partially addressed with the real-time framework for quadrotor kinodynamic planning in \autoref{chap:quad} which can detect collisions and plan a new trajectory. However, the time complexity for planning grows quadratically with the number of proposition regions, rendering the real-time planning task infeasible for specifications involving many atomic propositions.
+
+Furthermore, completeness of our method remains to be proven given the multilayer approach, as SST* and \texttt{kinoFMT} guarantee (probabilistic) completeness for each individual Kripke structure, however it is uncertain what can be said of the use of multiple Kripke structures in satisfying a single specification.

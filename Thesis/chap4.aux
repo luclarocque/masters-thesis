@@ -8,34 +8,128 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chap:quad}{{4}{40}{Quadrotor Motion Planning}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Quadrotor Model}{40}{section.4.1}}
 \citation{Allen2016}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Background}{41}{subsection.4.1.1}}
 \citation{Lee2010}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Quadrotor Model}{41}{section.4.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Inertial and body-fixed frames}}{42}{figure.4.1}}
 \newlabel{fig:frames}{{4.1}{42}{Inertial and body-fixed frames}{figure.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Real-Time Motion Planning}{42}{section.4.2}}
-\newlabel{chap:quad:rtmp}{{4.2}{42}{Real-Time Motion Planning}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Dynamics}{43}{subsection.4.1.2}}
+\newlabel{quad:dynamics}{{4.1.2}{43}{Dynamics}{subsection.4.1.2}{}}
+\newlabel{quad:dyn:eqn1}{{4.2}{43}{Dynamics}{equation.4.1.2}{}}
+\newlabel{quad:dyn:eqn2}{{4.3}{43}{Dynamics}{equation.4.1.3}{}}
+\citation{Lanczos1986}
+\newlabel{quad:dyn:eqn3}{{4.6}{44}{Dynamics}{equation.4.1.6}{}}
+\newlabel{quad:eqn:dudt}{{4.7}{44}{Dynamics}{equation.4.1.7}{}}
+\citation{Mellinger2012}
+\citation{Lee2010}
+\citation{Mellinger2012}
+\newlabel{quad:dyn:eqn4}{{4.8}{45}{Dynamics}{equation.4.1.8}{}}
+\newlabel{quad:full_dyn}{{4.9}{45}{Dynamics}{equation.4.1.9}{}}
+\citation{Allen2016}
+\citation{Allen2016}
+\newlabel{quad:eqn:invert_this}{{4.10}{46}{Dynamics}{equation.4.1.10}{}}
+\newlabel{quad:generic_sys}{{4.11}{46}{}{equation.4.1.11}{}}
+\newlabel{quad:problem}{{4.1.2}{46}{}{equation.4.1.13}{}}
+\citation{Allen2016}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Real-Time Motion Planning}{47}{section.4.2}}
+\newlabel{chap:quad:rtmp}{{4.2}{47}{Real-Time Motion Planning}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Framework Overview}{47}{subsection.4.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Offline Phase}{47}{section*.8}}
+\@writefile{toc}{\contentsline {subsubsection}{Online Planning}{48}{section*.9}}
+\citation{Greeff2018}
+\citation{Fliess1995}
+\citation{Greeff2018}
+\citation{VanNieuwstadt1998}
+\citation{Mellinger2011}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Differential Flatness}{49}{subsection.4.2.2}}
+\newlabel{quad:diff_flat}{{4.2.2}{49}{Differential Flatness}{subsection.4.2.2}{}}
+\citation{Allen2016}
+\citation{Schmerling2015}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Quadrotor Dynamics Approximation}{50}{subsection.4.2.3}}
+\newlabel{quad:approxdyn}{{4.14}{50}{Quadrotor Dynamics Approximation}{equation.4.2.14}{}}
+\citation{Schmerling2015}
+\citation{Allen2016}
+\newlabel{quad:eqn:cost}{{4.15}{51}{Quadrotor Dynamics Approximation}{equation.4.2.15}{}}
+\newlabel{quad:eqn:opt_cost}{{4.16}{51}{Quadrotor Dynamics Approximation}{equation.4.2.16}{}}
+\citation{Allen2014}
+\citation{Allen2016}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Reachable Set Approximation}{52}{subsection.4.2.4}}
+\newlabel{quad:reachable_set}{{4.2.4}{52}{Reachable Set Approximation}{subsection.4.2.4}{}}
+\citation{Smola2004}
+\citation{Richter2016}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Trajectory Smoothing}{53}{subsection.4.2.5}}
+\citation{Mellinger2011}
+\citation{Allen2016}
+\newlabel{quad:eqn:Jsnap}{{4.24}{54}{Trajectory Smoothing}{equation.4.2.24}{}}
+\newlabel{quad:eqn:Q}{{4.26}{54}{Trajectory Smoothing}{equation.4.2.26}{}}
+\newlabel{quad:eqn:constraint}{{4.27}{55}{Trajectory Smoothing}{equation.4.2.27}{}}
+\newlabel{quad:eqn:Jsnap2}{{4.29}{55}{Trajectory Smoothing}{equation.4.2.29}{}}
+\newlabel{quad:eqn:ordering}{{4.30}{56}{Trajectory Smoothing}{equation.4.2.30}{}}
+\newlabel{quad:eqn:reordering}{{4.31}{56}{Trajectory Smoothing}{equation.4.2.31}{}}
+\newlabel{quad:eqn:extended_constraint}{{4.32}{56}{Trajectory Smoothing}{equation.4.2.32}{}}
+\newlabel{quad:eqn:delta}{{4.33}{56}{Trajectory Smoothing}{equation.4.2.33}{}}
+\newlabel{quad:eqn:Jsnap-deriv}{{4.37}{57}{Trajectory Smoothing}{equation.4.2.37}{}}
+\newlabel{quad:eqn:dfree*}{{4.38}{57}{Trajectory Smoothing}{equation.4.2.38}{}}
+\newlabel{quad:eqn:final_poly}{{4.39}{57}{Trajectory Smoothing}{equation.4.2.39}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Smoothing Example}{57}{section*.10}}
+\newlabel{quad:eqn:matrix_eqn}{{4.40}{57}{Smoothing Example}{equation.4.2.40}{}}
+\citation{Richter2016}
+\citation{Lee2010}
+\citation{stackexchangeSO3}
+\citation{Lee2010}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Tracking Controller}{60}{subsection.4.2.6}}
+\newlabel{quad:tracking}{{4.2.6}{60}{Tracking Controller}{subsection.4.2.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Tracking Errors}{60}{section*.11}}
+\newlabel{quad:eqn:error_SO3}{{4.45}{60}{Tracking Errors}{equation.4.2.45}{}}
+\citation{Lee2010}
+\newlabel{quad:eqn:DRtrace1}{{4.49}{61}{Tracking Errors}{equation.4.2.49}{}}
+\newlabel{quad:eqn:DRtrace2}{{4.52}{61}{Tracking Errors}{equation.4.2.52}{}}
+\citation{Lee2010}
+\citation{Lee2010}
+\citation{Mellinger2012}
+\@writefile{toc}{\contentsline {subsubsection}{Control Laws}{62}{section*.12}}
+\citation{Mellinger2011}
+\citation{Allen2016}
+\citation{Mellinger2011}
+\citation{Lee2010}
+\citation{Lee2010}
+\citation{Lee2010}
+\newlabel{quad:eqn:control_law}{{4.72}{64}{Control Laws}{equation.4.2.72}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.7}Simulations}{64}{subsection.4.2.7}}
+\citation{Luis2016}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Quadrotor simulation tree}}{66}{figure.4.2}}
+\newlabel{quad:fig:sim_all_lines}{{4.2}{66}{Quadrotor simulation tree}{figure.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Quadrotor simulation waypoints}}{67}{figure.4.3}}
+\newlabel{quad:fig:sim_waypoints}{{4.3}{67}{Quadrotor simulation waypoints}{figure.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Quadrotor simulation smooth trajectory}}{68}{figure.4.4}}
+\newlabel{quad:fig:sim_smoothing}{{4.4}{68}{Quadrotor simulation smooth trajectory}{figure.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Quadrotor simulation trajectory tracking}}{69}{figure.4.5}}
+\newlabel{quad:fig:sim_tracking}{{4.5}{69}{Quadrotor simulation trajectory tracking}{figure.4.5}{}}
+\citation{Janson2015}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Abstracted Kripke Structures for Online Planning}{70}{section.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Algorithm}{70}{subsection.4.3.1}}
 \@setckpt{chap4}{
-\setcounter{page}{43}
-\setcounter{equation}{1}
-\setcounter{enumi}{6}
+\setcounter{page}{72}
+\setcounter{equation}{73}
+\setcounter{enumi}{3}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{0}
+\setcounter{footnote}{2}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{4}
-\setcounter{section}{2}
-\setcounter{subsection}{0}
+\setcounter{section}{3}
+\setcounter{subsection}{1}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{1}
+\setcounter{figure}{5}
 \setcounter{table}{0}
 \setcounter{parentequation}{0}
 \setcounter{thm}{2}
-\setcounter{defn}{7}
+\setcounter{defn}{9}
 \setcounter{exmp}{2}
 \setcounter{float@type}{8}
 \setcounter{algorithm}{8}
@@ -46,11 +140,11 @@
 \setcounter{ALG@blocknr}{12}
 \setcounter{ALG@storecount}{0}
 \setcounter{ALG@tmpcounter}{0}
-\setcounter{Item}{12}
-\setcounter{Hfootnote}{5}
-\setcounter{bookmark@seq@number}{29}
+\setcounter{Item}{15}
+\setcounter{Hfootnote}{7}
+\setcounter{bookmark@seq@number}{40}
 \setcounter{su@anzahl}{0}
 \setcounter{LT@tables}{0}
 \setcounter{LT@chunks}{0}
-\setcounter{section@level}{1}
+\setcounter{section@level}{2}
 }

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"array",
+				"\\arraystretch                                     \tlatex-dev"
+			],
+			[
+				"subsub",
+				"\\subsubsection{title}                             \tlatex-document"
+			],
+			[
 				"vec",
 				"\\vec{a}                                           \tlatex-mathsymbols"
 			],
@@ -515,7 +523,7 @@
 			"file": "uw-ethesis.tex",
 			"settings":
 			{
-				"buffer_size": 18004,
+				"buffer_size": 20824,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -524,7 +532,7 @@
 			"file": "chap1.tex",
 			"settings":
 			{
-				"buffer_size": 12894,
+				"buffer_size": 18832,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -533,7 +541,7 @@
 			"file": "chap2.tex",
 			"settings":
 			{
-				"buffer_size": 51273,
+				"buffer_size": 52086,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -542,7 +550,7 @@
 			"file": "chap3.tex",
 			"settings":
 			{
-				"buffer_size": 28498,
+				"buffer_size": 28099,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -551,7 +559,16 @@
 			"file": "chap4.tex",
 			"settings":
 			{
-				"buffer_size": 6148,
+				"buffer_size": 77899,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chap5.tex",
+			"settings":
+			{
+				"buffer_size": 2388,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -745,6 +762,18 @@
 		"selected_items":
 		[
 			[
+				"fig",
+				"Snippet: figure"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
 				"open",
 				"PackageResourceViewer: Open Resource"
 			],
@@ -779,10 +808,6 @@
 			[
 				"pacla",
 				"Package Control: List Unmanaged Packages"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"lint",
@@ -865,7 +890,7 @@
 	},
 	"console":
 	{
-		"height": 242.0,
+		"height": 553.0,
 		"history":
 		[
 			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
@@ -890,10 +915,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Luc/Google Drive/Research/Masters/Thesis"
+		"/Users/l2larocq/Google Drive/Research/Masters/Thesis",
+		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/figures"
 	],
 	"file_history":
 	[
+		"/Users/l2larocq/Google Drive/Research/Masters/ICRA 2018/Final version (double int)/paper.tex",
+		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/uw-ethesis-frontpgs.tex",
+		"/C/Users/Luc/Google Drive/Research/Masters/Thesis/uw-ethesis-frontpgs.tex",
+		"/C/Users/Luc/Desktop/The_Variational_Principles_of_Mechanics.bibtex",
+		"/C/Users/Luc/Google Drive/Other/Sublime settings/User/LaTeXTools.sublime-settings",
+		"/C/Users/Luc/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Luc/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-settings",
 		"/Users/l2larocq/Google Drive/Research/Masters/library.bib",
 		"/Users/l2larocq/Desktop/fmt-2000-nodes.png",
 		"/Users/l2larocq/Library/Application Support/Sublime Text 3/Packages/User/while.sublime-snippet",
@@ -905,7 +938,6 @@
 		"/Users/l2larocq/Library/Application Support/Sublime Text 3/Packages/User/state",
 		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/uw-ethesis.log",
 		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/chap4.tex",
-		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/uw-ethesis-frontpgs.tex",
 		"/Users/l2larocq/Library/Application Support/Sublime Text 3/Packages/SublimeLinter-chktex/linter.py",
 		"/Users/l2larocq/Library/Application Support/Sublime Text 3/Packages/SublimeLinter-chktex/README.md",
 		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/thesis.sublime-project",
@@ -1015,13 +1047,7 @@
 		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/find_shift_solution.py",
 		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/Fourier_derivative.py",
 		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/tex/A06_mysolns.tex",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/A06_mysolns.tex",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 751/Project/Presentation/bib.bib",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A05/two_systems.py",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A05/myLinAlg.py",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 751/Report/library.bib",
-		"/Users/l2larocq/Google Drive/Documents/LaTeX/Assn_template.tex",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A04/tex/A04_mysolns.tex"
+		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/A06_mysolns.tex"
 	],
 	"find":
 	{
@@ -1029,9 +1055,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 101.0,
+		"height": 104.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -1039,6 +1066,33 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"$n",
+			"time-comple",
+			"N_g",
+			"SST",
+			"FMT*",
+			"FMT",
+			"SST",
+			"todo",
+			"\\ref",
+			"fig:fmt_dia",
+			"quad:tracking",
+			"snap",
+			"d_{total}",
+			"\\mathcal{J}_{th}",
+			"J^*",
+			"J_{th}",
+			"\\R^m",
+			"\\sref",
+			"equatio",
+			"_{goal}",
+			"f(x",
+			"f(x(",
+			"\\section",
+			"steer",
+			"steering",
+			"steer",
+			"^T",
 			"vert",
 			"jaulin",
 			"primary",
@@ -1086,6 +1140,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\\gls{sst}",
+			"\\gls{fmt}",
+			"\\gls{sst}",
+			"d_{order}",
+			"J_{th}",
+			"\\mathcal{J}_{th}",
+			"^\\top",
 			"\\texttt",
 			"ModelCheck",
 			"texttt",
@@ -1114,21 +1175,85 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18004,
+						"buffer_size": 20824,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12777,
-								12777
+								5015,
+								5015
 							]
 						],
 						"settings":
 						{
+							"SL.108.region_keys":
+							[
+								"SL.chktex.Highlights.|41d09242b5add8e465029f6525310c603f6a1bf226b884d86b18fa39ad262a81|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|659880e25cc3d1b8438d5ca4eb593c0becc06fbfef6da4edf27122b8ab887534|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3b04e69e58b0c45b04bb32d2c0732891bbd4907ed743d006eeccb65d563a45b9|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|17e46f6185d1f0ff328b88d1614242d2761b99815bfe6264421c4d497a13ce48|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|97206cd7603ae421d57b3e10eec359d9206ad3e4b3eae6684304cab91934f85d|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|39f1e07ba82254952b0bda47a26c3bbb8bf7c6d677d22f1dd6b1d059aa6d3028|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|73df227f2b1cffcfc9e73577c60ab4ef6d3a972efe10e92cc4d7dfe411e0f02d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|c91a3fa5d8fd4c52cc47f6bdbc6c92930a6687fa4648fe21cbcc7f49cfa9f76f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|56e80a98540b61c2e8902f5a8e6cfa656148f53668c0f0186ebedd87e8a3f653|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|eb92440cda6737856915413e5f2e011db1e26624fe93d876b0e32b9b44a29889|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f6c1092be4b6df505b671a09b2374a5abc138b0b7f15630f3a2e22c7b1021718|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|645f006e167be8b0a8724e8ac4c72dd33869bf21256a411e2cf5d75dc905b6b9|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|6bf158b94d91f8de70326c671e2072c6acf68dd7b178e03395befba90bdeed3a|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.13.region_keys":
+							[
+								"SL.chktex.Highlights.|c54673fa5929e6c0350e1299427982564d6930b208479cebd2fab98f156a3ad4|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|6bb8a9f36ad008b2461a5f5e6686e4c45e4a6a0bdabb98803822ebc0ed6a7825|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|6fd6f74e7bded0945bbc98302649098b60705f93006a1837ef9ffd91cc5b02e2|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|c2aac4a2414ced619ba569adc73e46cb0854c20cee6ecdc1896e1b6f30a12445|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|53e6512e47c289bef6507f24be3e4bc5251c016ef777e21cbb0d1f12b8441896|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|550b752521b9eb88dad48181ff572d01897ed020283e191859cb8336e137f0f9|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|bcc134ad18bfb611895a26da6e28331718af76a4178f5e8b7bf3100dbb9797da|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|acd5b0df1d56d3f373fc7009fec980547418fe11f000a10a5f457fd13f6cf5f7|region.yellowish markup.warning.sublime_linter|32"
+							],
 							"SL.15.region_keys":
 							[
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|659880e25cc3d1b8438d5ca4eb593c0becc06fbfef6da4edf27122b8ab887534|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|97206cd7603ae421d57b3e10eec359d9206ad3e4b3eae6684304cab91934f85d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|41d09242b5add8e465029f6525310c603f6a1bf226b884d86b18fa39ad262a81|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|6bf158b94d91f8de70326c671e2072c6acf68dd7b178e03395befba90bdeed3a|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|eb92440cda6737856915413e5f2e011db1e26624fe93d876b0e32b9b44a29889|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|645f006e167be8b0a8724e8ac4c72dd33869bf21256a411e2cf5d75dc905b6b9|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|73df227f2b1cffcfc9e73577c60ab4ef6d3a972efe10e92cc4d7dfe411e0f02d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3b04e69e58b0c45b04bb32d2c0732891bbd4907ed743d006eeccb65d563a45b9|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|17e46f6185d1f0ff328b88d1614242d2761b99815bfe6264421c4d497a13ce48|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|39f1e07ba82254952b0bda47a26c3bbb8bf7c6d677d22f1dd6b1d059aa6d3028|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|c91a3fa5d8fd4c52cc47f6bdbc6c92930a6687fa4648fe21cbcc7f49cfa9f76f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|56e80a98540b61c2e8902f5a8e6cfa656148f53668c0f0186ebedd87e8a3f653|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f6c1092be4b6df505b671a09b2374a5abc138b0b7f15630f3a2e22c7b1021718|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.154.region_keys":
+							[
+								"SL.chktex.Highlights.|3589e9aaa7daaa1b32fba33c1288fe057b01cd376de51c2bbd4540d75f374970|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|2fe8c0ba472bbe854be599f30ac64a09e31cde04cdaae63e16a3c282bc70733d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|e3d18faef2cf0298ba3d1f3af58f658032ca54cc8d4d3181fa82e7bb286cf250|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|a37d09bd9964a04983a7f95e9370a62cdfce260cf63fb01a4b5c29f36f8e4e4d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|09b3b6c898b99ace06041dde25ce722f4ff5222b0f73d8b594bc96557f3eb808|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|8cce8d1c4b7f8a3af4394e953b0729d250d88e3cc30504d84fbac85dad1cca6e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|1dceecd6470eafffdc4edf548f5f4907195943576e53800f872bc8c3295f980c|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|a4f044629d907dd1ce53477a787f2ed2a145e3defbcf20e2ed3d37d81c3fe0cd|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|785f3c48e3e792ba971042999493e458218cf44ff98c74be8e4d26acf9f06382|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3e50e3d994fbc8b92bf0b07e2f833559bb15ddcf6ba1c500c325f524c8ed8d73|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|4096b038169308a7fa8b6a1c46fd754a56ab3a099647aed93c3b12d620d74b0b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f91c87632cd7c274b70fbcfee831245bb81e84733b970defdac4bdeacca64363|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|c2ce4373173a21cabbe75e260b71e617c9abb7c296eedc5503c81c9f8b168456|region.yellowish markup.warning.sublime_linter|32"
 							],
 							"SL.17.region_keys":
 							[
@@ -1195,18 +1320,82 @@
 								"SL.chktex.Highlights.|bcc134ad18bfb611895a26da6e28331718af76a4178f5e8b7bf3100dbb9797da|region.yellowish markup.warning.sublime_linter|32",
 								"sublime_linter.protected_regions"
 							],
+							"SL.559.region_keys":
+							[
+								"SL.chktex.Highlights.|5a1dd58d5d9badb939810b1e1719f216eea70fd8f2e0ebd6ffc28872d327e1d0|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|52f4be67a5570dac84c8773a6a326243fb4f72ff210cbd3661e3a0fd4fbec435|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|cc30de58f3afbaec06f5da1e6c52901c3853e31ead5629cb3bdc6ea60d417af4|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|00a63c29d12af3fe974c48675822a8b98ec8ba6a38c8c2a37cd0d901a051c85c|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|94498ec780c71a5fc90487e20ddcbcdf0085ea1312faf47595090aad300bdb96|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|a71febb69a25a8e9c85482ec1f2ff04284a78ff8b76d73bcc033679087d14a53|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"SL.608.region_keys":
+							[
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|1b6f8df7941f184960bb8ac14d7e2729c526cdf7055b75d0016f1e473283369c|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f91c87632cd7c274b70fbcfee831245bb81e84733b970defdac4bdeacca64363|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3ff6b58175b398f7020cb903dd107ad5c27aad065283552618553d3d2832194e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|13564ea08fae44523075cf4a85803a04fedf07291502a3107cd87086db9d92ca|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|e3d18faef2cf0298ba3d1f3af58f658032ca54cc8d4d3181fa82e7bb286cf250|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|c2ce4373173a21cabbe75e260b71e617c9abb7c296eedc5503c81c9f8b168456|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|a4f044629d907dd1ce53477a787f2ed2a145e3defbcf20e2ed3d37d81c3fe0cd|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|eee5b6703307a62bb0f409367d64bea9f9a4f04cc059dfd26307f39cca3cac41|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|2fe8c0ba472bbe854be599f30ac64a09e31cde04cdaae63e16a3c282bc70733d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|5b8533b4cd72330370d3b43ceac6a870071d90f7e2b36ad91824c79a16961af7|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|4096b038169308a7fa8b6a1c46fd754a56ab3a099647aed93c3b12d620d74b0b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|0b1da9971197779aadc0a4e7d38308ea7107fc579e764dc303a6be61af507be1|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.65.region_keys":
+							[
+								"SL.chktex.Highlights.|2fe8c0ba472bbe854be599f30ac64a09e31cde04cdaae63e16a3c282bc70733d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|e3d18faef2cf0298ba3d1f3af58f658032ca54cc8d4d3181fa82e7bb286cf250|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|878a9bba024815e5fa2a25c5f6638ebd4adbe53ead3496da5685693c65069900|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|ea27cc3a4a23b7aed4541e01c447a9621d47a508f20fcc0c1acb986a1355c45e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|a4f044629d907dd1ce53477a787f2ed2a145e3defbcf20e2ed3d37d81c3fe0cd|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|785f3c48e3e792ba971042999493e458218cf44ff98c74be8e4d26acf9f06382|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|7fbf8106e2d30829256b4146d264a49edb10b611f151838816123e351a7523be|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3cf51a89fc73aa5f36f86eab6b463e5f060a197f3a1baa54b4c00b34e3b32ccf|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|4096b038169308a7fa8b6a1c46fd754a56ab3a099647aed93c3b12d620d74b0b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|614988fb987ae5b1e77d71ce292dd78597f5eb6edfcb6f55264f650736565892|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f91c87632cd7c274b70fbcfee831245bb81e84733b970defdac4bdeacca64363|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|c2ce4373173a21cabbe75e260b71e617c9abb7c296eedc5503c81c9f8b168456|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3449f1ffe61c8566eae5d368522431859a2f36eb415f1a6a3f0d9af924801783|region.yellowish markup.warning.sublime_linter|32"
+							],
 							"SL.83.region_keys":
 							[
+							],
+							"SL.89.region_keys":
+							[
+								"SL.chktex.Highlights.|2fe8c0ba472bbe854be599f30ac64a09e31cde04cdaae63e16a3c282bc70733d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|ea27cc3a4a23b7aed4541e01c447a9621d47a508f20fcc0c1acb986a1355c45e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|a4f044629d907dd1ce53477a787f2ed2a145e3defbcf20e2ed3d37d81c3fe0cd|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|785f3c48e3e792ba971042999493e458218cf44ff98c74be8e4d26acf9f06382|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|e3d18faef2cf0298ba3d1f3af58f658032ca54cc8d4d3181fa82e7bb286cf250|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|7fbf8106e2d30829256b4146d264a49edb10b611f151838816123e351a7523be|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|878a9bba024815e5fa2a25c5f6638ebd4adbe53ead3496da5685693c65069900|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3cf51a89fc73aa5f36f86eab6b463e5f060a197f3a1baa54b4c00b34e3b32ccf|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|4096b038169308a7fa8b6a1c46fd754a56ab3a099647aed93c3b12d620d74b0b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|614988fb987ae5b1e77d71ce292dd78597f5eb6edfcb6f55264f650736565892|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f91c87632cd7c274b70fbcfee831245bb81e84733b970defdac4bdeacca64363|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|c2ce4373173a21cabbe75e260b71e617c9abb7c296eedc5503c81c9f8b168456|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3449f1ffe61c8566eae5d368522431859a2f36eb415f1a6a3f0d9af924801783|region.yellowish markup.warning.sublime_linter|32"
 							],
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3735.0,
+						"translation.y": 1911.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1215,21 +1404,33 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12894,
+						"buffer_size": 18832,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								18831,
+								18831
 							]
 						],
 						"settings":
 						{
+							"SL.14.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.155.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
 							"SL.159.region_keys":
 							[
+							],
+							"SL.16.region_keys":
+							[
+								"sublime_linter.protected_regions"
 							],
 							"SL.18.region_keys":
 							[
@@ -1249,6 +1450,9 @@
 							[
 							],
 							"SL.31.region_keys":
+							[
+							],
+							"SL.34.region_keys":
 							[
 							],
 							"SL.36.region_keys":
@@ -1277,13 +1481,20 @@
 							"SL.44.region_keys":
 							[
 							],
+							"SL.609.region_keys":
+							[
+							],
+							"SL.90.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3632.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1292,58 +1503,52 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 51273,
+						"buffer_size": 52086,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								19252,
+								19252
 							]
 						],
 						"settings":
 						{
+							"SL.110.region_keys":
+							[
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|a4406b94e5e3a762e2a520785c3235601620a081f70a19ae68806c54e8f477f8|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|2c1f86bf399726d57fe255517fbf13fb28a0acad66c1b24cbed0cc18d9466a59|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|624264537bcfff25f81764e32c28646897ce0e5a6984dba1b8bc11809e40fd4f|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.15.region_keys":
+							[
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|ae4d74e920685c104a213876d065ee3227fb54fe7708178a5ca63fab64898e6f|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|8b66c818a9cb674d73add869bd65505475ee6d4f9ba29ca4b0aac1ce40878e83|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f977d2cc4aa6befc2f160cd21366efd709d20080e2467f57be3904cc174f978a|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.156.region_keys":
+							[
+								"SL.chktex.Highlights.|000e17f7629da0d35b39f89bce369333a1eac801cecb1e0e41ca8858a369a3f7|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|c0ffd70f05edd2f58d51b433925281f3947311ad377da9c558b9c0d20861498f|region.yellowish markup.warning.sublime_linter|32"
+							],
 							"SL.160.region_keys":
 							[
 							],
 							"SL.17.region_keys":
 							[
-								"SL.chktex.Highlights.|4f0cd83592fd28b3ee78c0c2b2baec2ba338af3eb01f28f7a07e9905130015ee|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|1e10cd9dbf31ab627ba327b5afb1ca11073e2051054e11d20e40952711362aaf|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|aac01ef5cdd6c378db85cec53e6afcd91c606d77b56cc0289c452278910b7aef|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|494220ffb1ad3af659310ab1798a3cf2213de74b7eef2781e4bc4f00d556e8b3|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|2b513e67911bd51eade071a717b0b35fe890ec89d551f17de5739cf73142db51|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|5255c2e8bfccb906daf8aa2993c9bebd69cc82ae7956f260fad2575ae1a88d00|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|b55fa817c72bcea4323352d3cc038a01d9b069daaf053feaf7b3fd21f128b4a3|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|ce2c0ce6c64e225541987f7b5416ebce7692165ccfe6bcb7282ba290047895da|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|c98284ce29d30926afb1fe416ac85c51c68b7c64ee3d0e417bcaebd1b861a277|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|8d282927949b5785ce148546a4e9ec1df081a8784a47d0086e03ea4775058e09|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|fb1c1bfac75327ea7b02045961ebd292aa3371438788adae67da870e433ca1e3|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|1bd979a9e546506d23e12e525764cb496dbd459ccae3d12e88b9a1c1b0556624|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|d91db5cd531abb78d731d64ac4b43ed80492ff5b19473d00ef90af71788ae90d|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|e16a0901e9c94e4d3542a4ad55f32a78226b8624b7b640731335824f5ee526ae|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|586dd1b8959694bdf1814301ad84188da116421f07df448b45968e9aa6ccd08f|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|b82b094d5ef24f405f5f9c8e0cdb8bed082fab8afaa4eb69bd5ae8dc6e03a564|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|bef96eea6e66f0873dedf635f1168cb68cfc6d85c99710cfb481d34bdadc818c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|23a325c7b5294c3774c16f4b0ca49b169a68c5dc6c79cc32b42430d6020fdb9e|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|c4d97de1274da561f8004a891168d3ea11360084eaff6b731b2f8bcbf53c9121|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|0d4c5921945c1566b5b7f5489b5b02c947d520794e02c175338a1f3fdab224d5|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|0a9639544bd106b0dbfd181422a9bfbd14209cc9aa8922e7a231aa7ade1873e1|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|6d39b33abfe95e70f9edc6b7b4bcd09434769ea74ef45db45081efc6385872f4|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|2517eda42a41c8256d799ce8dfc021161815915732b38cc6ea5821d003dae151|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|bd48c3a058f17b2f0e07e70c985cf35d5c03a332c656a0833ae76c3975a61f36|region.yellowish markup.warning.sublime_linter|32",
 								"sublime_linter.protected_regions",
-								"SL.chktex.Highlights.|5bddb937c3010e2e61d1f08e560b2326fdc1682b5115c896d842c1432e7d780d|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|2e865394b1c26047b5066d1568fdc1302ba211735e76a6b64073e2b105b7220c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|7506a06b75cc453c001aeb6e914aa135465ddbafb0398cd2396116e348deb579|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|2c1f86bf399726d57fe255517fbf13fb28a0acad66c1b24cbed0cc18d9466a59|region.yellowish markup.warning.sublime_linter|32",
 								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.chktex.Highlights.|c08bcc3ea95f9ed30b25051655eb4276e277a0f4bcf4e43dbfd920cf39014b51|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|97e23e3b74909b397bffdd2889699ca6dc8210a634578b4ef71395ad8e5eeb9f|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|932f58e8e51457640d2989beb19d36c0b0574f234cc5ac43986b6af131788f4c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|4957f798e762e1db9db27e4f2c06ae0fb6533e7d2e04febf66f903104af6c2b3|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|f8cec279ebd8a72417bc57307fce5d5eb8909c8f39e4ae8c97ddc5194d46c3f7|region.yellowish markup.warning.sublime_linter|32"
+								"SL.chktex.Highlights.|a4406b94e5e3a762e2a520785c3235601620a081f70a19ae68806c54e8f477f8|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|624264537bcfff25f81764e32c28646897ce0e5a6984dba1b8bc11809e40fd4f|region.yellowish markup.warning.sublime_linter|32"
 							],
 							"SL.19.region_keys":
 							[
@@ -1367,6 +1572,14 @@
 							"SL.29.region_keys":
 							[
 							],
+							"SL.35.region_keys":
+							[
+								"SL.chktex.Highlights.|ae4d74e920685c104a213876d065ee3227fb54fe7708178a5ca63fab64898e6f|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|8b66c818a9cb674d73add869bd65505475ee6d4f9ba29ca4b0aac1ce40878e83|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|f977d2cc4aa6befc2f160cd21366efd709d20080e2467f57be3904cc174f978a|region.yellowish markup.warning.sublime_linter|32"
+							],
 							"SL.37.region_keys":
 							[
 								"sublime_linter.protected_regions"
@@ -1378,15 +1591,22 @@
 							[
 								"sublime_linter.protected_regions"
 							],
+							"SL.561.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.91.region_keys":
+							[
+							],
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1318.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1395,24 +1615,35 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 28498,
+						"buffer_size": 28099,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								74,
-								74
+								14063,
+								14063
 							]
 						],
 						"settings":
 						{
+							"SL.111.region_keys":
+							[
+							],
+							"SL.157.region_keys":
+							[
+							],
+							"SL.16.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
 							"SL.161.region_keys":
 							[
 							],
 							"SL.18.region_keys":
 							[
+								"sublime_linter.protected_regions"
 							],
 							"SL.20.region_keys":
 							[
@@ -1446,6 +1677,9 @@
 							"SL.30.region_keys":
 							[
 							],
+							"SL.36.region_keys":
+							[
+							],
 							"SL.46.region_keys":
 							[
 								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
@@ -1453,6 +1687,15 @@
 								"SL.chktex.Highlights.|897b1d54bb339275c3a8835a6f365ad2e5d2a4a61f5f7efbdd94e68f17964fbd|region.yellowish markup.warning.sublime_linter|32",
 								"sublime_linter.protected_regions",
 								"SL.chktex.Highlights.|650f20e316d96188dd3cf956bd495b74c3ea765dd1a27245a190d429b9bd768c|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.562.region_keys":
+							[
+							],
+							"SL.611.region_keys":
+							[
+							],
+							"SL.92.region_keys":
+							[
 							],
 							"SL.95.region_keys":
 							[
@@ -1462,7 +1705,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3479.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1474,19 +1717,42 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6148,
+						"buffer_size": 77899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5085,
-								5085
+								77106,
+								77106
 							]
 						],
 						"settings":
 						{
+							"SL.112.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.158.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|e7ffccd7fce7cd98bf6264e6d056dd3ddcc774a4f07368596a2b74882687e2a7|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.17.region_keys":
+							[
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|bf298080b419296dcc4d2f5d83311ee077a4391e9fe147d3b7e85975db2081a4|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"SL.18.region_keys":
+							[
+							],
+							"SL.19.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
 							"SL.22.region_keys":
 							[
 								"sublime_linter.protected_regions"
@@ -1508,7 +1774,92 @@
 							"SL.279.region_keys":
 							[
 							],
+							"SL.37.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
 							"SL.47.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.563.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.612.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.69.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.93.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 22967.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "chap5.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2069,
+								2069
+							]
+						],
+						"settings":
+						{
+							"SL.113.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.159.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.18.region_keys":
+							[
+							],
+							"SL.19.region_keys":
+							[
+							],
+							"SL.20.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.38.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.564.region_keys":
+							[
+							],
+							"SL.613.region_keys":
+							[
+							],
+							"SL.70.region_keys":
+							[
+							],
+							"SL.94.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
@@ -1518,7 +1869,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1526,7 +1877,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 24.0
 	},
 	"input":
 	{
@@ -1569,7 +1920,7 @@
 	},
 	"output.find_results":
 	{
-		"height": 100.0
+		"height": 225.0
 	},
 	"output.latextools":
 	{
@@ -1591,7 +1942,7 @@
 	"project": "thesis.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1629,7 +1980,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 175.0,
+	"side_bar_width": 225.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

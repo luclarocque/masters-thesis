@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Allen2014}
+Ross Allen, Ashley~A Clark, Joseph~A Starek, and Marco Pavone.
+\newblock {A Machine Learning Approach for Real-Time Reachability Analysis}.
+\newblock {\em International Conference on Intelligent Robots and Systems},
+  (Iros):2202--2208, 2014.
+
 \bibitem{Allen2016}
 Ross Allen and Marco Pavone.
 \newblock {A Real-Time Framework for Kinodynamic Planning with Application to
@@ -31,6 +37,12 @@ E.~Allen Emerson, Charanjit~S. Jutla, and A.~Prasad Sistla.
   volume 258.
 \newblock 1999.
 
+\bibitem{Fliess1995}
+Michel Fliess, Jean Levine, Philippe Martin, and Pierre Rouchon.
+\newblock {Flatness and defect of non-linear systems: Introductory theory and
+  examples}.
+\newblock {\em International Journal of Control}, 61(6):1327--1361, 1995.
+
 \bibitem{Greeff2018}
 Melissa Greeff and Angela~P. Schoellig.
 \newblock {Model Predictive Path-Following for Constrained Differentially Flat
@@ -42,6 +54,10 @@ Melissa Greeff and Angela~P. Schoellig.
 Arie Gurfinkel and Marsha Chechik.
 \newblock {Extending extended vacuity}.
 \newblock {\em Formal Methods in Computer-Aided Design}, pages 306--321, 2004.
+
+\bibitem{stackexchangeSO3}
+Copper.hat (https://math.stackexchange.com/users/27978/copper hat).
+\newblock {Determine the trace of a matrix in SO(3,R)}.
 
 \bibitem{Indyk1998}
 Piotr Indyk and Rajeev Motwd.
@@ -102,6 +118,11 @@ L.E. Kavraki, Petr Svestka, J.-C. Latombe, and M.H. Overmars.
 \newblock {\em IEEE Transactions on Robotics and Automation}, 12(4):566 -- 580,
   1996.
 
+\bibitem{Lanczos1986}
+C.~Lanczos.
+\newblock {\em {The Variational Principles of Mechanics}}.
+\newblock Dover Publications, 4 edition, 1986.
+
 \bibitem{Larocque2018}
 Luc Larocque and Jun Liu.
 \newblock {Sampling-Based Motion Planning with mu-Calculus Specifications
@@ -146,6 +167,11 @@ Hai Lin.
   Robot Motion Planning and Control}.
 \newblock {\em Unmanned Systems}, 02(02):201--216, 2014.
 
+\bibitem{Luis2016}
+Carlos Luis and J{\'{e}}r{\^{o}}me~Le Ny.
+\newblock {Design of a Trajectory Tracking Controller for a Nanoquadcopter}.
+\newblock 2016.
+
 \bibitem{Lutin2013}
 Jerome~M. Lutin, Alain~L. Kornhauser, and Eva Lerner-Lam.
 \newblock {The revolutionary development of self-driving vehicles and
@@ -153,16 +179,40 @@ Jerome~M. Lutin, Alain~L. Kornhauser, and Eva Lerner-Lam.
 \newblock {\em ITE Journal (Institute of Transportation Engineers)},
   83(7):28--32, 2013.
 
-\bibitem{Richter2013}
+\bibitem{Mellinger2012}
+Daniel Mellinger.
+\newblock {\em {Trajectory generation and control for quadrotors}}.
+\newblock PhD thesis, 2012.
+
+\bibitem{Mellinger2011}
+Daniel Mellinger and Vijay Kumar.
+\newblock {Minimum snap trajectory generation and control for quadrotors}.
+\newblock {\em Proceedings - IEEE International Conference on Robotics and
+  Automation}, pages 2520--2525, 2011.
+
+\bibitem{Richter2016}
 Charles Richter, Adam Bry, and Nicholas Roy.
-\newblock {Polynomial trajectory planning for quadrotor flight}.
-\newblock {\em International Conference on Robotics and Automation},
-  (Isrr):1--16, 2013.
+\newblock {Polynomial Trajectory Planning for Aggressive Quadrotor Flight in
+  Dense Indoor Environments}.
+\newblock In {\em International Conference on Robotics and Automation}, pages
+  649--666. 2016.
+
+\bibitem{Schmerling2015}
+Edward Schmerling, Lucas Janson, and Marco Pavone.
+\newblock {Optimal sampling-based motion planning under differential
+  constraints: The drift case with linear affine dynamics}.
+\newblock {\em 2015 IEEE International Conference on Robotics and Automation
+  (ICRA)}, (Cdc):2368--2375, 2015.
 
 \bibitem{Schneider2004}
 Klaus Schneider.
 \newblock {\em {Verification of Reactive Systems}}.
 \newblock Springer Science {\&} Business Media, 2004.
+
+\bibitem{Smola2004}
+Alex~J. Smola and Bernhard Sch{\"{o}}lkopf.
+\newblock {A tutorial on support vector regression}.
+\newblock {\em Statistics and Computing}, 14(3):199--222, 2004.
 
 \bibitem{Tarski1955}
 Alfred Tarski.
@@ -178,6 +228,12 @@ Russ Tedrake.
 Sebastian Thrun.
 \newblock {Toward robotic cars}.
 \newblock {\em Communications of the ACM}, 53(4):99--106, 2010.
+
+\bibitem{VanNieuwstadt1998}
+Michiel~J. {Van Nieuwstadt} and Richard~M. Murray.
+\newblock {Real time trajectory generation for differentially flat systems}.
+\newblock {\em International Journal of Robust and Nonlinear Control},
+  8(11):995--1020, 1998.
 
 \bibitem{Webb2013}
 Dustin~J. Webb and Jur {Van Den Berg}.

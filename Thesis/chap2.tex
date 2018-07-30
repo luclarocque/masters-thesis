@@ -88,7 +88,7 @@ The existential and universal {\em predecessor\/} functions $\text{Pre}_{K,\ \cd
 
 In words, $\true{} = (p \lor \lnot p)$ holds for all states in $S$, and $\false{} = (p \land \lnot p)$ does not hold for any state in $S$; disjunction and conjunction of formulas is equivalent to the union and intersection of the sets which satisfy them, respectively; $\Diamond$ is the {\em existential\/successor} (or ``next'') operator, and $\square$ is the {\em universal\/successor} operator; lastly, $\mu$ and $\nu$ are the {\em least\/} and {\em greatest\/fixed-point} operators, respectively, where $e[X \leftarrow A]$ is a modified evaluation function which maps $X$ to $A$, i.e., $e[X \leftarrow A](X) = A$. To help build a more intuitive understanding of these last four semantic definitions, a simple example is provided (\autoref{mucalc_example}).
 
-\begin{figure}[!ht]
+\begin{figure}[!hb]
     \centering
     \includegraphics[width=0.6\textwidth]{./figures/mucalc_example}
     \caption[$\mu$-Calculus semantics example]{$\mu$-Calculus semantics \autoref{mucalc_example}.}
@@ -96,8 +96,8 @@ In words, $\true{} = (p \lor \lnot p)$ holds for all states in $S$, and $\false{
 \end{figure}
 
 \begin{exmp}\label{mucalc_example}
-Refer to \autoref{fig:mucalc_example}.\\
-Define atomic proposition $p$ to be the boolean value corresponding to ``in gray region''. Then we can specify the labeling function for each node, writing $\mathcal{L}(s_p) = \{p\}$ for nodes $s_p \in \{a, b, c\}$, and $\mathcal{L}(s) = \emptyset$ for nodes $s \in \{d, e, f, g \}$. Note that the environment superscript $e$ is omitted as we are not using any free variables.
+This example illustrates the semantics presented above. Refer to \autoref{fig:mucalc_example}.\\
+Define atomic proposition $p$ to be the boolean value corresponding to ``in gray region''. We can specify the labeling function for each node, writing $\mathcal{L}(s_p) = \{p\}$ for nodes $s_p \in \{a, b, c\}$, and $\mathcal{L}(s) = \emptyset$ for nodes $s \in \{d, e, f, g \}$. Note that the environment superscript $e$ is omitted as we are not using any free variables.
 
 \begin{tabular}{l}\label{table:modal_mucalc_syntax}
     $\brackets{p}_K = \{s \in S : p \in \mathcal{L}(s) \} = \{a, b, c\}$ \\    
@@ -107,18 +107,19 @@ Define atomic proposition $p$ to be the boolean value corresponding to ``in gray
     $\brackets{\mu X.(p \lor \Diamond X)}_K = \bigcap \{ A \subseteq S : \brackets{\phi}_K^{e[X \leftarrow A]} \subseteq A \} = \{ a,b,c,d,f \}$ \\
     $\brackets{\nu X.(p \land \Diamond X)}_K = \bigcup \{ A \subseteq S : \brackets{\phi}_K^{e[X \leftarrow A]} \supseteq A \} = \{ a, c \}$
 \end{tabular}
+
 \begin{itemize}
     \item $\brackets{p}_K$ is the set of nodes satisfying $p$ (nodes in the gray region).
     \item $\lb \lnot p \rb_K$ is the complement of $\brackets{p}_K$ in $S$ (nodes that are not in the gray region).
-    \item $\brackets{\Diamond p}_K$ contains those nodes that have a transition to a node satisfying $p$.
-    \item $\brackets{\square p}_K$ contains only nodes such that every transition leads to a node satisfying $p$.
-    \item $\brackets{\mu X.(p \lor \Diamond X)}_K$ is the ``Reachability'' specification (see \autoref{prelims:spec_examples}). In this case, the resulting set consists of the nodes that are in the gray region \emph{or} that can take transitions to eventually reach a node in the gray region.
-    \item $\brackets{\nu X.(p \land \Diamond X)}_K$ is the ``Safety'' specification (see \autoref{prelims:spec_examples}). In this case, the resulting set consists of the nodes that are in the gray region \emph{and} can always take a transition to a node that is also in the gray region. 
+    \item $\brackets{\Diamond p}_K$ contains those nodes that have a transition to a node in the gray region.
+    \item $\brackets{\square p}_K$ contains only nodes such that \emph{every} transition leads to a node in the gray region.
+    \item $\brackets{\mu X.(p \lor \Diamond X)}_K$ is the \emph{reachability} specification which determines whether there exists a sequence of transitions reaching a state satisfying $p$ (see \autoref{prelims:spec_examples}). In this case, the resulting set consists of the nodes that are in the gray region \emph{or} that can follow transitions to eventually reach a node in the gray region.
+    \item $\brackets{\nu X.(p \land \Diamond X)}_K$ is the \emph{safety} specification which determines whether there exists a sequence of transitions guaranteeing that proposition $p$ is always satisfied (see \autoref{prelims:spec_examples}). In this case, the resulting set consists of the nodes that are in the gray region \emph{and} can always take a transition to a node that is also in the gray region. 
 \end{itemize}
-
 \end{exmp}
 
-In order to develop a means to evaluate expressions containing fixed-point operators, we rely on the Tarski-Knaster theorem from set theory. The next section introduces some definitions before stating the required theorem.
+In order to develop a means of evaluating expressions containing fixed-point operators, we rely on the Tarski-Knaster theorem from set theory. The next section introduces some definitions before stating the required theorem.
+
 
 
 
@@ -207,7 +208,7 @@ We will use this theorem to perform model checking over a Kripke structure on pr
 
 \subsection{\texorpdfstring{Deterministic $\mu$-Calculus}{Deterministic mu-Calculus}}\label{prelims:deterministic_mucalc}
 
-We will focus our efforts on a fragment of \mucalc{} called {\em deterministic\/\mucalc{}\/} which admits efficient model-checking algorithms and is at least as expressive as the commonly used linear time temporal logics \gls{ltl} and \gls{ctl}~\cite{Karaman2009}. Deterministic \mucalc{} imposes some restrictions on syntax, notably that only atomic propositions may be negated, conjunction can only occur between a formula and an atomic proposition, and the universal successor operator $\square$ is omitted. We may write this syntax succinctly in Backus-Naur form as follows:
+We will focus our efforts on a fragment of \mucalc{} called {\em deterministic\/\mucalc{}\/} which admits efficient model checking algorithms and is at least as expressive as the commonly used linear time temporal logics \gls{ltl} and \gls{ctl}~\cite{Karaman2009}. Deterministic \mucalc{} imposes some restrictions on syntax, notably that only atomic propositions may be negated, conjunction can only occur between a formula and an atomic proposition, and the universal successor operator $\square$ is omitted. We may write this syntax succinctly in Backus-Naur form as follows:
 \[ 
 \phi := p \ | \ \lnot p \ | \ X \ | \ p \land \phi \ | \ \lnot p \land \phi \ | \ \phi \lor \phi \ | \ \Diamond \phi \ | \ \mu X.\phi \ | \ \nu X. \phi
 \]
@@ -266,9 +267,12 @@ This section will introduce several examples of commonly used deterministic \muc
 
     \item \textbf{Liveness}: $\phi = \nu Y. \mu X.((p \land \Diamond Y) \lor \Diamond X)$
 
-    Liveness, is a specification which guarantees that atomic proposition $p$ is satisfied infinitely often. This example is the first with an alternation depth greater than one, where alternation depth refers to the level of mutually recursive least and greatest fixed point operators~\cite{Wilke2001}.
+    Liveness, is a specification which guarantees that atomic proposition $p$ is satisfied infinitely often. This example is the first with an alternation depth greater than one, where alternation depth refers to the level of mutually recursive least and greatest fixed point operators~\cite{Wilke2001}. A more formal definition of alternation depth is presented in~\cite{Cleaveland1993}, though the definition seen here is sufficient for our purposes.
+
     Consider the largest proper subformula of $\phi$, $\psi = {\mu X.((p \land \Diamond Y) \lor \Diamond X)}$. This can be seen as a reachability specification where the goal is to eventually reach states satisfying $\eta = p \land \Diamond Y$, which itself looks like a safety specification, remarking that $\eta$ is in the scope of a greatest fixed point operator. We may parse the liveness specification $\phi = {\nu Y.\psi} = {\nu Y.\mu X.(\eta \lor \Diamond X)}$ as follows: $\psi$ ensures that a region satisfying ${\eta = p \land \Diamond Y}$ is reached, and $\eta$ ensures that $p$ is satisfied and that there is a transition to a state satisfying $\psi$. Having mutually recursive greatest and least fixed point operators in this way allows for this more complex combination of reachability and safety, where $\phi$ is satisfied by all states which have paths that {\it always\/eventually} reach $\brackets{p}_K$. Note that liveness is also sometimes called the {\it B\"uchi\/objective} in the context of infinite parity games, a topic closely related to \mucalc{}~\cite{Emerson1991,Karaman2012,Wilke2001}.
 \end{enumerate}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -282,8 +286,7 @@ One very useful property of \gls{sst} is that it does not rely on having the sol
 
 Although scarce, there are a small number of sampling-based planning algorithms that do not require a steering function, most notably RRT-Extend~\cite{LaValle2001} and \gls{est}. While \gls{est} has been shown to be asymptotically optimal (RRT-Extend is not), the rate of convergence to the (near-) optimal solution is logarithmic, making it impractical at reliably finding high-quality paths. On the other hand, the advantages offered by \gls{sst}* include being provably asymptotically optimal as well as having good (linear) convergence to high-quality solutions. \gls{sst}* is further improved by its use of a sparse data structure, where a pruning operation is used to accelerate nearest neighbours searches, thereby ameliorating computational efficiency.
 
-
-We will now describe the implementation details of the \gls{sst}* sampling-based planning algorithm. \gls{sst}* employs \texttt{MonteCarlo\_Prop} which forward propagates a selected node, $x_{selected}$; that is, a random control vector is sampled from the allowed control-space, $\mathbb{U}$, and supplied as input to the system dynamics for a random duration, up to some specified maximum time, $T_{prop}$, resulting in trajectories with piecewise constant control inputs (see \autoref{alg:montecarlo}).
+We will now describe the implementation details of the \gls{sst}* sampling-based planning algorithm. \gls{sst}* employs \texttt{MonteCarlo\_Prop} which, as the name suggests, forward propagates a selected node, $x_{selected}$, using random sampling. Specifically, a random control vector is sampled from the allowed control-space, $\mathbb{U}$, and supplied as input to the system dynamics for a random duration, up to some specified maximum time, $T_{prop}$, resulting in trajectories with piecewise constant control inputs (see \autoref{alg:montecarlo}).
 
 \begin{algorithm}
 \caption{\texttt{MonteCarlo\_Prop}$(x_{selected}, \mathbb{U}, T_{prop})$}
@@ -313,17 +316,6 @@ We will now describe the implementation details of the \gls{sst}* sampling-based
 \end{algorithmic}{}
 \end{algorithm}
 
-
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[scale=0.28]{./figures/trueflappy_1}
-    \caption[SST Flappy Bird Example]{An example of a tree produced by \gls{sst} for the flappy bird problem. The initial state is in the top-left, the point travels at a constant horizontal velocity, and the control-space is a set containing only two options: ``do nothing'', or ``accelerate up'', each for a random duration. The least-cost solution for this execution is highlighted in pink.}
-\label{fig:flappy}
-\end{figure}
-
-Furthermore, \gls{sst}* applies a pruning operation to maintain a sparse data structure. Pruning removes high-cost nodes to improve run-time by accelerating nearest neighbour searches. With this in mind, a graph of witness nodes is maintained, where each witness keeps track of an optimal-cost representative node within a $\delta_s$-radius of the witness. Correspondingly, we must determine whether a new node is the ``best'' in its neighbourhood in order to decide whether or not to keep it. For this purpose, we use \texttt{Is\_Locally\_Best} presented in \autoref{alg:locallybest}. The algorithm finds the nearest witness state, $s_{new}$, to the newly propagated state $x_{new}$. If $s_{new}$ is not within distance $\delta_s$ of $x_{new}$, $x_{new}$ is deemed locally best by default and becomes a new witness node. In this way, $x_{new}$ is added to the set of witness nodes, $S$. If $x_{new}$ does have a neighbour within a $\delta_s$ radius, the chosen cost function, \texttt{Cost}, is used to check whether the new state is better than the locally best representative of the witness node.
-
 \begin{algorithm}
 \caption{\texttt{Is\_Locally\_Best}$(x_{new}, S, \delta_s)$}
 \label{alg:locallybest}
@@ -343,8 +335,9 @@ Furthermore, \gls{sst}* applies a pruning operation to maintain a sparse data st
 \end{algorithmic}{}
 \end{algorithm}
 
-Now that there is a means of determining whether a state is locally best, we are ready to define the algorithm which enforces sparsity, \texttt{Prune} (\autoref{alg:prune}). First, the nearest witness state, $s_{new}$, to the newly propagated state, $x_{new}$, is found. We want to set $x_{new}$ to be the representative of $s_{new}$ since it has been deemed locally best if the \gls{sst}* algorithm has reached this point (see \autoref{alg:sst}), but first we must check whether or not $s_{new}$ already has a representative. Since \texttt{Prune} is only executed if \texttt{Is\_Locally\_Best} returns \texttt{True}, then if $s_{new}$ has a representative, it must have higher cost than $x_{new}$, and it must now be moved from $\mathbb{V}_{active}$ to $\mathbb{V}_{inactive}$. The next step is to remove inactive leaf nodes recursively, so that if the previous representative of $s_{new}$ is an inactive leaf node, it is removed entirely from the set of all nodes, $\mathbb{V}$, and the check is preformed again with the parent of the removed leaf node.
+Furthermore, \gls{sst}* applies a pruning operation to maintain a sparse data structure. Pruning removes high-cost nodes to improve run-time by accelerating nearest neighbour searches. With this in mind, a graph of witness nodes is maintained, where each witness keeps track of an optimal-cost representative node within a $\delta_s$-radius of the witness. Correspondingly, we must determine whether a new node is the ``best'' in its neighbourhood in order to decide whether or not to keep it. For this purpose, we use \texttt{Is\_Locally\_Best} presented in \autoref{alg:locallybest}. The algorithm finds the nearest witness state, $s_{new}$, to the newly propagated state $x_{new}$. If $s_{new}$ is not within distance $\delta_s$ of $x_{new}$, $x_{new}$ is deemed locally best by default and becomes a new witness node. In this way, $x_{new}$ is added to the set of witness nodes, $S$. If $x_{new}$ does have a neighbour within a $\delta_s$ radius, the chosen cost function, \texttt{Cost}, is used to check whether the new state is better than the locally best representative of the witness node.
 
+Now that there is a means of determining whether a state is locally best, we are ready to define the algorithm which enforces sparsity, \texttt{Prune} (\autoref{alg:prune}). First, the nearest witness state, $s_{new}$, to the newly propagated state, $x_{new}$, is found. We want to set $x_{new}$ to be the representative of $s_{new}$ since it has been deemed locally best if the \gls{sst}* algorithm has reached this point (see \autoref{alg:sst}), but first we must check whether or not $s_{new}$ already has a representative. Since \texttt{Prune} is only executed if \texttt{Is\_Locally\_Best} returns \texttt{True}, then if $s_{new}$ has a representative, it must have higher cost than $x_{new}$, and it must now be moved from $\mathbb{V}_{active}$ to $\mathbb{V}_{inactive}$. The next step is to remove inactive leaf nodes recursively, so that if the previous representative of $s_{new}$ is an inactive leaf node, it is removed entirely from the set of all nodes, $\mathbb{V}$, and the check is preformed again with the parent of the removed leaf node.
 
 \begin{algorithm}
 \caption{\texttt{Prune}$(x_{new}, \mathbb{V}_{active}, \mathbb{V}_{inactive}, \mathbb{E})$}
@@ -367,6 +360,7 @@ Now that there is a means of determining whether a state is locally best, we are
 \end{algorithmic}{}
 \end{algorithm}
 
+With the necessary helper functions defined, the pseudocode for \gls{sst}* is outlined in \autoref{alg:sst}. Note that the nested for-loop constitutes the core of \gls{sst}, and the addition of the update step for $\delta_s$ and $delta_{BN}$ is all that is necessary to make the algorithm asymptotically optimal instead of being merely asymptotically near-optimal. This is because, if these two parameters do not tend to zero as the number of iterations goes to infinity, then there will always be some degree of sparsity, which means that not every possible solution is explored. In terms of notation, the overline indicates an edge (trajectory from one state to another), and $d, l$ denote the number of dimensions of the state space and the control space, respectively.
 
 \begin{algorithm}
 \caption{\texttt{SST*}$(\mathbb{X}, \mathbb{U}, x_0, T_{prop}, N, \delta_{BN}, \delta_s, \xi)$}
@@ -398,12 +392,14 @@ Now that there is a means of determining whether a state is locally best, we are
 \end{algorithmic}{}
 \end{algorithm}
 
-With the necessary helper functions defined, the pseudocode for \gls{sst}* is outlined in \autoref{alg:sst}. Note that the nested for-loop constitutes the core of \gls{sst}, and the addition of the update step for $\delta_s$ and $delta_{BN}$ is all that is necessary to make the algorithm asymptotically optimal instead of being merely asymptotically near-optimal. This is because, if these two parameters do not tend to zero as the number of iterations goes to infinity, then there will always be some degree of sparsity, which means that not every possible solution is explored. In terms of notation, the overline indicates an edge (trajectory from one state to another), and $d, l$ denote the number of dimensions of the state space and the control space, respectively.
-
-
 It is important to note that proper tuning of the parameters used in \gls{sst}* is crucial for effective path planning. The most significant parameters are $\delta_{BN}$ and $\delta_s$, which are the radii for selecting low-cost nearby nodes and for pruning in the vicinity of witness nodes, respectively. Choosing a large value of $\delta_s$ can decrease the time it takes to find an initial solution at the cost of solution quality, while choosing a large value of $\delta_{BN}$ can improve initial solution quality while increasing the time it takes to find an initial solution. Moreover, the \gls{sst}* algorithm is \emph{incremental}, meaning states are not sampled all at once, rather during each iteration a new state is sampled to incrementally grow a tree. A consequence of the incremental nature of \gls{sst}* is that there is no clear way to precompute solution trajectories for online use unless (necessarily static) obstacles and the initial state are specified exactly. In simulations, we have found that feasible trajectories can often be computed in under 10 seconds for simple linear systems with state space dimension three or lower; however, it can take several hundred seconds to compute solutions for higher-dimensional nonlinear systems.
 
-
+\begin{figure}[hb]
+    \centering
+    \includegraphics[scale=0.23]{./figures/trueflappy}
+    \caption[SST Flappy Bird Example]{An example of a tree produced by \gls{sst} for the flappy bird problem. The initial state is in the top-left, the point travels at a constant horizontal velocity, and the control-space is a set containing only two options: ``do nothing'', or ``accelerate up'', each for a random duration. The least-cost solution for this execution is highlighted in pink.}
+\label{fig:flappy}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -415,8 +411,6 @@ It is important to note that proper tuning of the parameters used in \gls{sst}* 
 \gls{fmt} is an asymptotically optimal sampling-based motion planning algorithm that was specifically developed for use in high-dimensional systems~\cite{Janson2015}. In simulations, Janson et al.\ consistently found that \gls{fmt} converges to high-quality solutions faster than \gls{prm}* and \gls{rrt}* for systems with dimension from 2D to 7D. The improvements were more noticeable in higher dimensions, making \gls{fmt} a very promising algorithm for complex motion planning problems such as for those involving quadrotors, which operate in a 12D state space.
 
 Unlike \gls{sst}*, \gls{fmt} is not an incremental algorithm. An important distinction results from this difference in algorithm design, namely that the definition of asymptotic optimality must be altered to accommodate the fact that \gls{fmt} uses a predetermined number of sampled states. As mentioned in~\ref{intro:sbmp}, the definition of asymptotic optimality essentially involves finding an optimal solution as the number of samples tends to infinity. In such case, each iteration builds upon an existing graph, refining the structure and covering more of the state space. For non-incremental algorithms, the definition of asymptotic optimality can be summarized as follows: the cost of the solution returned by an algorithm must converge in probability to the optimal cost.
-
-For this work, we consider the kinodynamic variant of \gls{fmt} by Ross Allen and Marco Pavone called \texttt{kinoFMT}. The primary distinction lies in the fact that, due to considerations of differential constraints, there is a fundamental difference between searching for nearest backward-reachable and forward-reachable states. In the case of backward reachability, $\texttt{Near\_Backward}(x,V,J_{th})$ finds states in $V$ that can reach state $x$ without exceeding a threshold cost, $J_{th}$. In contrast, $\texttt{Near\_Forward}(x,V,J_{th})$ finds states in $V$ that can be reached by $x$ itself without exceeding $J_{th}$. See \autoref{quad:reachable_set} for further details. In fact, using a cost threshold is another deviation from the standard \gls{fmt} algorithm, which uses a distance threshold. Since kinodynamic planning is concerned with feasibility under kinematic and dynamic constraints, a simple distance metric is insufficient for determining which states are easily reachable from another state. \autoref{alg:fmt} presents the pseudocode of \texttt{kinoFMT} which is similar to the algorithm shown in~\cite{Allen2016} except for some slight changes for clarity and implementational simplicity.
 
 % chktex-file 35  (disables warning for {max/min})
 \begin{algorithm}
@@ -451,11 +445,13 @@ For this work, we consider the kinodynamic variant of \gls{fmt} by Ross Allen an
 \end{algorithmic}{}
 \end{algorithm}
 
+For this work, we consider the kinodynamic variant of \gls{fmt} by Ross Allen and Marco Pavone called \texttt{kinoFMT}. The primary distinction lies in the fact that, due to considerations of differential constraints, there is a fundamental difference between searching for nearest backward-reachable and forward-reachable states. In the case of backward reachability, $\texttt{Near\_Backward}(x,V,J_{th})$ finds states in $V$ that can reach state $x$ without exceeding a threshold cost, $J_{th}$. In contrast, $\texttt{Near\_Forward}(x,V,J_{th})$ finds states in $V$ that can be reached by $x$ itself without exceeding $J_{th}$. See \autoref{quad:reachable_set} for further details. In fact, using a cost threshold is another deviation from the standard \gls{fmt} algorithm, which uses a distance threshold. Since kinodynamic planning is concerned with feasibility under kinematic and dynamic constraints, a simple distance metric is insufficient for determining which states are easily reachable from another state. \autoref{alg:fmt} presents the pseudocode of \texttt{kinoFMT} which is similar to the algorithm shown in~\cite{Allen2016} except for some slight changes for clarity and implementational simplicity.
+
 The main idea behind \gls{fmt} and \texttt{kinoFMT} is to use forward dynamic programming on a predetermined number of sampled states. The algorithms perform graph construction and graph search simultaneously, thus the final least-cost node lying in the goal region is already known when the algorithm terminates. In other words, by the nature of the expansion of the tree structure, the least-cost nodes on the frontier of expansion are always tracked, so that when the goal is reached, it is not necessary to search the entire tree for the optimal terminal node. Moreover, since tree structures contain no cycles, there exists a unique path from the starting node to the terminal node. \autoref{fig:fmt_example} demonstrates an example of a solution path found via \gls{fmt}.
 
-\begin{figure}[!ht]
+\begin{figure}[!hb]
     \centering
-    \includegraphics[scale=0.5]{./figures/fmt-2000-nodes}
+    \includegraphics[scale=0.36]{./figures/fmt-2000-nodes}
     \caption[FMT* Example]{Example of a tree generated by \gls{fmt} using 2000 nodes. The initial state is shown at the top center as a green hexagon, the goal region lies in the bottom left and is shown in green, and obstacles are represented by red rectangles. The optimal path is highlighted in blue. This example does not use any dynamic model, so the cost function is simply the Euclidean distance.}
 \label{fig:fmt_example}
 \end{figure}

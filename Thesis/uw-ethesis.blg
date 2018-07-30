@@ -8,17 +8,17 @@ A level-1 auxiliary file: chap4.aux
 A level-1 auxiliary file: chap5.aux
 The style file: plain.bst
 Database file #1: ../library.bib
-Repeated entry---line 905 of file ../library.bib
- : @article{Indyk1998
- :                   ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1430 of file ../library.bib
+Repeated entry---line 1027 of file ../library.bib
  : @article{Smola2004
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1830 of file ../library.bib
+Repeated entry---line 1046 of file ../library.bib
  : @article{Fliess1995
  :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1338 of file ../library.bib
+ : @article{Indyk1998
+ :                   ,
 I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in Allen2014
 Warning--can't use both volume and number fields in Emerson1999
@@ -30,45 +30,45 @@ Warning--empty journal in Luis2016
 Warning--empty school in Mellinger2012
 Warning--empty publisher in Richter2016
 Warning--there's a number but no volume in Schmerling2015
-You've used 45 entries,
+You've used 49 entries,
             2118 wiz_defined-function locations,
-            789 strings with 11955 characters,
-and the built_in function-call counts, 15659 in all, are:
-= -- 1610
-> -- 628
+            814 strings with 12729 characters,
+and the built_in function-call counts, 16982 in all, are:
+= -- 1743
+> -- 695
 < -- 16
-+ -- 247
-- -- 202
-* -- 1046
-:= -- 2513
-add.period$ -- 135
-call.type$ -- 45
-change.case$ -- 231
++ -- 273
+- -- 224
+* -- 1149
+:= -- 2740
+add.period$ -- 147
+call.type$ -- 49
+change.case$ -- 254
 chr.to.int$ -- 0
-cite$ -- 55
-duplicate$ -- 631
-empty$ -- 1220
-format.name$ -- 202
-if$ -- 3331
+cite$ -- 59
+duplicate$ -- 674
+empty$ -- 1317
+format.name$ -- 224
+if$ -- 3596
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 47
-newline$ -- 227
-num.names$ -- 90
-pop$ -- 241
+int.to.str$ -- 49
+missing$ -- 51
+newline$ -- 247
+num.names$ -- 98
+pop$ -- 258
 preamble$ -- 1
-purify$ -- 191
+purify$ -- 210
 quote$ -- 0
-skip$ -- 486
+skip$ -- 516
 stack$ -- 0
-substring$ -- 1147
-swap$ -- 177
+substring$ -- 1239
+swap$ -- 181
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 170
+type$ -- 186
 warning$ -- 10
-while$ -- 166
-width$ -- 47
-write$ -- 486
+while$ -- 180
+width$ -- 51
+write$ -- 529
 (There were 3 error messages)

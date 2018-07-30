@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"muclac",
+				"\\mucalc{}                                         \tlocal"
+			],
+			[
+				"mcu",
+				"\\mucalc{}                                         \tlocal"
+			],
+			[
 				"array",
 				"\\arraystretch                                     \tlatex-dev"
 			],
@@ -506,14 +514,6 @@
 			[
 				"hfi",
 				"\\hlinefill                                        \tlatex-document"
-			],
-			[
-				"sqrt",
-				"\\sqrt{arg}                                        \tlatex-document"
-			],
-			[
-				"M",
-				"M"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "uw-ethesis.tex",
 			"settings":
 			{
-				"buffer_size": 20824,
+				"buffer_size": 20723,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -532,7 +532,7 @@
 			"file": "chap1.tex",
 			"settings":
 			{
-				"buffer_size": 18832,
+				"buffer_size": 19115,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -541,7 +541,7 @@
 			"file": "chap2.tex",
 			"settings":
 			{
-				"buffer_size": 52086,
+				"buffer_size": 52570,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -550,7 +550,7 @@
 			"file": "chap3.tex",
 			"settings":
 			{
-				"buffer_size": 28099,
+				"buffer_size": 28268,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -559,7 +559,7 @@
 			"file": "chap4.tex",
 			"settings":
 			{
-				"buffer_size": 77899,
+				"buffer_size": 81802,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -568,7 +568,7 @@
 			"file": "chap5.tex",
 			"settings":
 			{
-				"buffer_size": 2388,
+				"buffer_size": 5682,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -920,8 +920,11 @@
 	],
 	"file_history":
 	[
-		"/Users/l2larocq/Google Drive/Research/Masters/ICRA 2018/Final version (double int)/paper.tex",
+		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/chap5.tex",
+		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/chap2.tex",
 		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/uw-ethesis-frontpgs.tex",
+		"/Users/l2larocq/Google Drive/Research/Masters/Thesis/title_abstract-Luc_Larocque.txt",
+		"/Users/l2larocq/Google Drive/Research/Masters/ICRA 2018/Final version (double int)/paper.tex",
 		"/C/Users/Luc/Google Drive/Research/Masters/Thesis/uw-ethesis-frontpgs.tex",
 		"/C/Users/Luc/Desktop/The_Variational_Principles_of_Mechanics.bibtex",
 		"/C/Users/Luc/Google Drive/Other/Sublime settings/User/LaTeXTools.sublime-settings",
@@ -1044,10 +1047,7 @@
 		"/Users/l2larocq/Downloads/uw-ethesis.tex",
 		"/Users/l2larocq/Google Drive/Documents/AMATH 751/Report/chap1.tex",
 		"/Users/l2larocq/Google Drive/Documents/AMATH 751/Project/Presentation/project_slides.tex",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/find_shift_solution.py",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/Fourier_derivative.py",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/tex/A06_mysolns.tex",
-		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/A06_mysolns.tex"
+		"/Users/l2larocq/Google Drive/Documents/AMATH 740/A06/find_shift_solution.py"
 	],
 	"find":
 	{
@@ -1063,9 +1063,16 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"model-checking",
+			"fig:fla",
+			"VanNieuw",
+			"vannew",
+			"monte",
+			"proposition",
+			"title",
 			"$n",
 			"time-comple",
 			"N_g",
@@ -1140,6 +1147,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"model checking",
 			"\\gls{sst}",
 			"\\gls{fmt}",
 			"\\gls{sst}",
@@ -1166,7 +1174,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -1175,15 +1183,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20824,
+						"buffer_size": 20723,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5015,
-								5015
+								10494,
+								10546
 							]
 						],
 						"settings":
@@ -1221,21 +1229,21 @@
 							],
 							"SL.15.region_keys":
 							[
-								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|f6c1092be4b6df505b671a09b2374a5abc138b0b7f15630f3a2e22c7b1021718|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.chktex.Highlights.|6bf158b94d91f8de70326c671e2072c6acf68dd7b178e03395befba90bdeed3a|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|3b04e69e58b0c45b04bb32d2c0732891bbd4907ed743d006eeccb65d563a45b9|region.yellowish markup.warning.sublime_linter|32",
 								"SL.chktex.Highlights.|659880e25cc3d1b8438d5ca4eb593c0becc06fbfef6da4edf27122b8ab887534|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|56e80a98540b61c2e8902f5a8e6cfa656148f53668c0f0186ebedd87e8a3f653|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|39f1e07ba82254952b0bda47a26c3bbb8bf7c6d677d22f1dd6b1d059aa6d3028|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.chktex.Highlights.|eb92440cda6737856915413e5f2e011db1e26624fe93d876b0e32b9b44a29889|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|c91a3fa5d8fd4c52cc47f6bdbc6c92930a6687fa4648fe21cbcc7f49cfa9f76f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|73df227f2b1cffcfc9e73577c60ab4ef6d3a972efe10e92cc4d7dfe411e0f02d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|17e46f6185d1f0ff328b88d1614242d2761b99815bfe6264421c4d497a13ce48|region.yellowish markup.warning.sublime_linter|32",
 								"SL.chktex.Highlights.|97206cd7603ae421d57b3e10eec359d9206ad3e4b3eae6684304cab91934f85d|region.yellowish markup.warning.sublime_linter|32",
 								"SL.chktex.Highlights.|41d09242b5add8e465029f6525310c603f6a1bf226b884d86b18fa39ad262a81|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|6bf158b94d91f8de70326c671e2072c6acf68dd7b178e03395befba90bdeed3a|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|eb92440cda6737856915413e5f2e011db1e26624fe93d876b0e32b9b44a29889|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|645f006e167be8b0a8724e8ac4c72dd33869bf21256a411e2cf5d75dc905b6b9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|73df227f2b1cffcfc9e73577c60ab4ef6d3a972efe10e92cc4d7dfe411e0f02d|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|3b04e69e58b0c45b04bb32d2c0732891bbd4907ed743d006eeccb65d563a45b9|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.chktex.Highlights.|17e46f6185d1f0ff328b88d1614242d2761b99815bfe6264421c4d497a13ce48|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|39f1e07ba82254952b0bda47a26c3bbb8bf7c6d677d22f1dd6b1d059aa6d3028|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|c91a3fa5d8fd4c52cc47f6bdbc6c92930a6687fa4648fe21cbcc7f49cfa9f76f|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|56e80a98540b61c2e8902f5a8e6cfa656148f53668c0f0186ebedd87e8a3f653|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|f6c1092be4b6df505b671a09b2374a5abc138b0b7f15630f3a2e22c7b1021718|region.yellowish markup.warning.sublime_linter|32"
+								"SL.chktex.Highlights.|645f006e167be8b0a8724e8ac4c72dd33869bf21256a411e2cf5d75dc905b6b9|region.yellowish markup.warning.sublime_linter|32"
 							],
 							"SL.154.region_keys":
 							[
@@ -1392,10 +1400,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1911.0,
+						"translation.y": 3700.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1404,15 +1412,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18832,
+						"buffer_size": 19115,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18831,
-								18831
+								16143,
+								16143
 							]
 						],
 						"settings":
@@ -1491,10 +1499,10 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3632.0,
+						"translation.y": 2792.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1503,110 +1511,44 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 52086,
+						"buffer_size": 52570,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								19252,
-								19252
+								19871,
+								19885
 							]
 						],
 						"settings":
 						{
-							"SL.110.region_keys":
+							"SL.34.region_keys":
 							[
+								"SL.chktex.Highlights.|f7e7fd87f6443d2bc143de5eb0eb5b57b21b67f0c99f09fd55f9060611e1392e|region.yellowish markup.warning.sublime_linter|32",
 								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"sublime_linter.protected_regions",
-								"SL.chktex.Highlights.|a4406b94e5e3a762e2a520785c3235601620a081f70a19ae68806c54e8f477f8|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|2c1f86bf399726d57fe255517fbf13fb28a0acad66c1b24cbed0cc18d9466a59|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|624264537bcfff25f81764e32c28646897ce0e5a6984dba1b8bc11809e40fd4f|region.yellowish markup.warning.sublime_linter|32"
-							],
-							"SL.15.region_keys":
-							[
-								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.chktex.Highlights.|ae4d74e920685c104a213876d065ee3227fb54fe7708178a5ca63fab64898e6f|region.yellowish markup.warning.sublime_linter|32",
-								"sublime_linter.protected_regions",
-								"SL.chktex.Highlights.|8b66c818a9cb674d73add869bd65505475ee6d4f9ba29ca4b0aac1ce40878e83|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|f977d2cc4aa6befc2f160cd21366efd709d20080e2467f57be3904cc174f978a|region.yellowish markup.warning.sublime_linter|32"
-							],
-							"SL.156.region_keys":
-							[
-								"SL.chktex.Highlights.|000e17f7629da0d35b39f89bce369333a1eac801cecb1e0e41ca8858a369a3f7|region.yellowish markup.warning.sublime_linter|32",
-								"sublime_linter.protected_regions",
-								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.chktex.Highlights.|c0ffd70f05edd2f58d51b433925281f3947311ad377da9c558b9c0d20861498f|region.yellowish markup.warning.sublime_linter|32"
-							],
-							"SL.160.region_keys":
-							[
-							],
-							"SL.17.region_keys":
-							[
-								"sublime_linter.protected_regions",
-								"SL.chktex.Highlights.|2c1f86bf399726d57fe255517fbf13fb28a0acad66c1b24cbed0cc18d9466a59|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.chktex.Highlights.|a4406b94e5e3a762e2a520785c3235601620a081f70a19ae68806c54e8f477f8|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|624264537bcfff25f81764e32c28646897ce0e5a6984dba1b8bc11809e40fd4f|region.yellowish markup.warning.sublime_linter|32"
-							],
-							"SL.19.region_keys":
-							[
+								"SL.chktex.Highlights.|e9f4cadd1887bfce3718007dabf987f4581f0ec84db597ae9ac0455352e8ecfd|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f3dd4db708623a00bf8383653402f8ffe463a68ae42a9ea6944a85ad0e95b146|region.yellowish markup.warning.sublime_linter|32",
 								"sublime_linter.protected_regions"
 							],
-							"SL.20.region_keys":
+							"SL.71.region_keys":
 							[
-								"sublime_linter.protected_regions",
-								"SL.chktex.Highlights.|8b66c818a9cb674d73add869bd65505475ee6d4f9ba29ca4b0aac1ce40878e83|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Highlights.|f977d2cc4aa6befc2f160cd21366efd709d20080e2467f57be3904cc174f978a|region.yellowish markup.warning.sublime_linter|32",
 								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.chktex.Highlights.|ae4d74e920685c104a213876d065ee3227fb54fe7708178a5ca63fab64898e6f|region.yellowish markup.warning.sublime_linter|32"
-							],
-							"SL.223.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.253.region_keys":
-							[
-							],
-							"SL.29.region_keys":
-							[
-							],
-							"SL.35.region_keys":
-							[
-								"SL.chktex.Highlights.|ae4d74e920685c104a213876d065ee3227fb54fe7708178a5ca63fab64898e6f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|f1a0208794362bebf0ae74121ca2b665f53148504793c2eb567c8a6e8a9b8ff5|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Highlights.|1893997dfdbfa77a0548f148eb1c9ee04ca5a84ada89637594ec573c6313863e|region.yellowish markup.warning.sublime_linter|32",
 								"sublime_linter.protected_regions",
-								"SL.chktex.Highlights.|8b66c818a9cb674d73add869bd65505475ee6d4f9ba29ca4b0aac1ce40878e83|region.yellowish markup.warning.sublime_linter|32",
-								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.chktex.Highlights.|f977d2cc4aa6befc2f160cd21366efd709d20080e2467f57be3904cc174f978a|region.yellowish markup.warning.sublime_linter|32"
-							],
-							"SL.37.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.41.region_keys":
-							[
-							],
-							"SL.45.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.561.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.91.region_keys":
-							[
+								"SL.chktex.Highlights.|d331e8343f2a76c60d4bcab99caab983c6a84a6c1c8d54654fccf5948bcbfd49|region.yellowish markup.warning.sublime_linter|32"
 							],
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1318.0,
+						"translation.y": 5415.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1615,15 +1557,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 28099,
+						"buffer_size": 28268,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14063,
-								14063
+								13263,
+								13263
 							]
 						],
 						"settings":
@@ -1694,6 +1636,12 @@
 							"SL.611.region_keys":
 							[
 							],
+							"SL.72.region_keys":
+							[
+								"SL.chktex.Highlights.|ad4f25eb2c3be510987262071b5240033c1780bd8db654b849aec9a367685f01|region.yellowish markup.warning.sublime_linter|32",
+								"SL.chktex.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
 							"SL.92.region_keys":
 							[
 							],
@@ -1705,10 +1653,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3479.0,
+						"translation.y": 2980.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1717,15 +1665,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 77899,
+						"buffer_size": 81802,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								77106,
-								77106
+								76790,
+								76790
 							]
 						],
 						"settings":
@@ -1794,6 +1742,10 @@
 							[
 								"sublime_linter.protected_regions"
 							],
+							"SL.73.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
 							"SL.93.region_keys":
 							[
 								"sublime_linter.protected_regions"
@@ -1803,10 +1755,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 22967.0,
+						"translation.y": 24420.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1815,61 +1767,30 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2388,
+						"buffer_size": 5682,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2069,
-								2069
+								4567,
+								4567
 							]
 						],
 						"settings":
 						{
-							"SL.113.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.159.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.18.region_keys":
-							[
-							],
-							"SL.19.region_keys":
-							[
-							],
-							"SL.20.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.38.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.564.region_keys":
-							[
-							],
-							"SL.613.region_keys":
-							[
-							],
-							"SL.70.region_keys":
-							[
-							],
-							"SL.94.region_keys":
+							"SL.93.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 441.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1942,7 +1863,7 @@
 	"project": "thesis.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1980,7 +1901,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 225.0,
+	"side_bar_width": 276.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

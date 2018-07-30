@@ -425,9 +425,9 @@ We now return to the question: \emph{what is $\delta$, the number of derivatives
     A_{1..M} p_{1..M} = d_{1..M},
 \label{quad:eqn:extended_constraint}
 \end{equation}
-where $p_{1..M}$ is the vector that results from concatenating all of the polynomials coefficients for each of the $M$ polynomials. \autoref{quad:eqn:extended_constraint} is a system of $2\delta M$ equations, since each $d^j = {[d_0^j, d_T^j]}^\top$ contains $2\delta$ derivatives of the $j^{th}$ polynomial, $P_j(t)$. We assume we know all derivatives at the initial and final waypoint, and that we know $\beta$ derivatives at every intermediate waypoint. There are a total of $M+1$ waypoints, and we know all derivatives for two of them, leaving $(M-1)\cdot 2(\delta - \beta)$ unknown derivatives. As discussed, half of these unknowns are identical to the other half, so in total there are in fact only $(M-1)(\delta-\beta)$ unknown derivatives. Moreover, there are $M(N_p + 1)$ unknown polynomial coefficients. Ensuring the problem is never over-constrained, we equate the number of equations and the total number of unknown values and solve for $\delta$ and round down, giving:
+where $p_{1..M}$ is the vector that results from concatenating all of the polynomials coefficients for each of the $M$ polynomials. \autoref{quad:eqn:extended_constraint} is a system of $2\delta M$ equations, since each $d^j = {[d_0^j, d_T^j]}^\top$ contains $2\delta$ derivatives of the $j^{th}$ polynomial, $P_j(t)$. We assume we know all derivatives at the initial and final waypoint, and that we know $\beta$ derivatives at every intermediate waypoint. There are a total of $M+1$ waypoints, and we know all derivatives for two of them, leaving $(M-1)\cdot 2(\delta - \beta)$ unknown derivatives. As discussed, half of these unknowns are identical to the other half, so in total there are in fact only $(M-1)(\delta-\beta)$ unknown derivatives. Moreover, there are $M(N_p + 1)$ unknown polynomial coefficients. Ensuring the problem is never over-constrained, we use the number of equations and the total number of unknown values to solve for $\delta$, yielding the inequality:
 \begin{equation}
-    \delta = \floor*{\frac{M(N+1) - \beta(M-1)}{M+1}}.
+    \delta \leq \floor*{\frac{M(N+1) - \beta(M-1)}{M+1}}.
 \label{quad:eqn:delta}
 \end{equation}
 
@@ -830,22 +830,22 @@ Now that the method has been introduced in detail, we are ready to present simul
 
 First, we perform all of the necessary offline computation on four $10 \times 10 \times 10$ environments, where we choose $N_p = 200, 200, 1000, 2000$ samples, and cost threshold $J_{th} = 300, 260, 200, 150$, respectively. We choose decreasing values of $J_{th}$ as the number of samples increases since more samples implies a higher probability of reachable states; as such, we attempt to keep the number of online \gls{obvp} computations to a minimum while still connecting to a sufficient number of points in the tree. Note that we have precomputed the entire \texttt{Cost} look-up table for each configuration, so that the solution to the \gls{obvp} for every pair of sampled points is known before online initiation.
 
-When online, we choose the initial state to be $x_0 = (1.5, 1, 0, 0, 0, 0)$ (starting from rest) and the goal region is defined as the $1 \times 1 \times 2$ rectangular prism whose front-bottom-left corner is positioned at (6,9,8). Moreover, each goal region is explicitly sampled $m = 5$ times to ensure a variety of possible goal states. We also include two large obstacles. The quadrotor is constrained to stay within the bounding box, and must avoid colliding with obstacles.
+When online, we choose the initial state to be $x_0 = (1.5, 1, 0, 0, 0, 0)$ (starting from rest) and the goal region is defined as the $1 \times 1 \times 2$ rectangular prism whose front-bottom-left corner is positioned at (6,9,8). Moreover, each goal region is explicitly sampled $m = 5$ times to ensure a variety of possible goal states. We also include two large obstacles, shown in red, which the quadrotor must avoid. The quadrotor is constrained to stay within the bounding box, and aims to reach the goal, shown in cyan.
 
-\begin{figure}
+\begin{figure}[!hb]
     \centering
-    \hspace*{-4.7cm}
-    \includegraphics[scale=0.5]{./figures/sim_all_lines}
-    \caption[Quadrotor simulation tree]{Shown here are the tree structures generated for four different configurations. Obstacles are in red, and the goal space is in cyan. The top-left and top-right depict the $N_p = 200$ cases with $J_{th} = 300$ and $260$, respectively. The bottom-left is on $N_p = 1000$ samples with $J_{th} = 200$, and the bottom-right uses $N_p = 2000$ samples with $J_{th} = 150$. Edges represent collision-free paths between pairs of possible waypoints. Note that the visualization software always displays an unobstructed view of at least one 3D object, giving the false impression that no edges exist in front of the clearly visible obstacle.}
+    \hspace*{-2.6cm}
+    \includegraphics[scale=0.42]{./figures/sim_all_lines}
+    \caption[Quadrotor simulation tree]{Shown here are the tree structures generated for four different configurations. Starting from the top-left and reading across, we list the pairs $(N_p, J_{th})$ used: (200, 300), (200, 260), (1000, 200), (2000, 150). Edges represent collision-free paths between pairs of waypoints. Note that the visualization software displays an unobstructed view of at least one object, giving the false impression that no edges exist in front of the clearly visible obstacle.}
 \label{quad:fig:sim_all_lines}
 \end{figure}
 
-Upon running the online planning framework, and before smoothing is applied, we see the result of running \texttt{kinoFMT} in \autoref{quad:fig:sim_waypoints}. Each is the minimum cost path from initial state to goal region for the provided set of random samples. The case with $N_p = 200$ and the lower cost threshold, $J_{th} = 260$ was the fastest, taking 4.8 seconds, 0.95 seconds of which was incurred due to expensive collision checks which are considerably faster in physical experiments (sensors can be queried very rapidly). 
+Upon running the online planning framework, and before smoothing is applied, we see the result of running \texttt{kinoFMT} in \autoref{quad:fig:sim_waypoints}. Each is the minimum cost path from initial state to goal region for the provided set of random samples. The case with $N_p = 200$ and the lower cost threshold, $J_{th} = 260$ was the fastest, taking 3.98 seconds, 0.58 seconds of which was incurred due to expensive collision checks which are considerably faster in physical experiments (sensors can be queried very rapidly). Interestingly, the path incurring the least cost resulted from the $N_p = 200$, $J_{th} = 300$ case, although it was nearly identical in cost to the path produced on the configuration over 2000 samples.
 
 \begin{figure}
     \centering
-    \hspace*{-4.7cm}
-    \includegraphics[scale=0.5]{./figures/sim_waypoints}
+    \hspace*{-1.5cm}
+    \includegraphics[scale=0.31]{./figures/sim_waypoints}
     \caption[Quadrotor simulation waypoints]{Here we see the best-path waypoints as seen before smoothing is applied. \texttt{kinoFMT} returns a piecewise-linear path connecting the waypoints returned, shown in blue. The four configurations appear in the same order as in \autoref{quad:fig:sim_all_lines}.}
 \label{quad:fig:sim_waypoints}
 \end{figure}
@@ -854,25 +854,41 @@ Trajectory smoothing is run on the same configurations to obtain \autoref{quad:f
 
 \begin{figure}
     \centering
-    \hspace*{-4.7cm}
-    \includegraphics[scale=0.5]{./figures/sim_smoothing}
+    \hspace*{-1.5cm}
+    \includegraphics[scale=0.31]{./figures/sim_smoothing}
     \caption[Quadrotor simulation smooth trajectory]{Upon running the trajectory smoothing algorithm, we obtain the green curves shown here. Note that the curve always intersects the piecewise linear path (blue) at the waypoints.}
 \label{quad:fig:sim_smoothing}
 \end{figure}
 
 Finally, we demonstrate the effectiveness of the tracking controller presented in \autoref{quad:tracking}. The implementation of the tracking controller involves defining a function for the system dynamics from \autoref{quad:full_dyn}. Doing so allows us to forward integrate from the initial state using the control law from \autoref{quad:eqn:control_law}. Numerical integration is performed using the scipy.integrate.ode class with method set to ``vode'' which is the \emph{real-valued variable-coefficient ordinary differential equation} solver. As we demonstrate only a simulation, the control inputs $f$ and $\tau$ can be used directly, so the actual rotor torques need not be computed.
 
-The physical parameters are chosen to closely approximate a very small quadrotor, such as the one used in~\cite{Luis2016}. As such, the mass is set to $m=0.3$ kilograms, and the moment of inertia matrix is diagonal, letting $J=0.00002 I$, with units $Kg\cdot m^2$. Upon tuning the controller with appropriate gain matrices $K_x, K_v, K_R, K_\Omega$, we are able to track the smooth path very closely, as shown in \autoref{quad:fig:sim_tracking}. 
+The physical parameters are chosen to closely approximate a very small quadrotor, such as the one used in~\cite{Luis2016}. As such, the mass is set to $m=0.3$ kilograms, and the moment of inertia matrix is diagonal, letting $J=0.00002 I$, with units $Kg\cdot m^2$. Upon tuning the controller with appropriate gain matrices $K_x, K_v, K_R, K_\Omega$, we are able to track a sequence including a unit step, a linear ramp, and a quadratic curve. Note that all subsequent simulations in this section are performed on the set of 200 samples with $J_{th} = 260$. The tracking quality can be seen in \autoref{quad:fig:sim_tracking_piecewise}, and the tracking errors are displayed in~\autoref{quad:fig:sim_tracking_piecewise_errors}. It is clear that the controller successfully guides the controller toward the desired trajectory very rapidly, maintaining very small tracking errors except when the desired trajectory changes suddenly. We further demonstrate the efficacy of the tracking controller on a smooth path from the initial state to the goal in \autoref{quad:fig:sim_tracking}. 
 
 \begin{figure}
+    \hspace*{-8.8cm}
     \centering
-    \hspace*{-4cm}
+    \includegraphics[scale=0.68]{./figures/sim_tracking_piecewise}
+    \caption[Quadrotor step-response]{The $x,y,z$ positions resulting from tracking the dashed green reference trajectory are plotted. Response to a unit step, linear ramp, and quadratic curve are shown.}
+    \label{quad:fig:sim_tracking_piecewise}
+\end{figure}
+
+\begin{figure}
+    \hspace*{-4.2cm}
+    \centering
+    \includegraphics[scale=0.5]{./figures/sim_tracking_piecewise_errors}
+    \caption[Quadrotor tracking errors]{The norm of each of the error vectors is plotted. These error vectors arise from tracking the piecewise reference of \autoref{quad:fig:sim_tracking_piecewise}.}
+\label{quad:fig:sim_tracking_piecewise_errors}
+\end{figure}
+
+\begin{figure}
+    \hspace*{-4.7cm}
+    \centering
     \includegraphics[scale=0.5]{./figures/sim_tracking}
-    \caption[Quadrotor simulation trajectory tracking]{Tracking the polynomial trajectory generated for the $N_p = 200$, $J_{th}=260$ configuration (top-right instance of \autoref{quad:fig:sim_smoothing}). The nominal trajectory is shown as a dashed green line, though it is obscured by the simulated trajectory obtained using the tracking controller (black).}
+    \caption[Quadrotor smooth path tracking]{Tracking the polynomial trajectory generated for the $N_p = 200$, $J_{th}=260$ configuration (top-right instance of \autoref{quad:fig:sim_smoothing}). The nominal trajectory is shown as a dashed green line, though it is obscured by the simulated trajectory obtained using the tracking controller (black).}
 \label{quad:fig:sim_tracking}
 \end{figure}
 
-% TODO: include step response?
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -881,21 +897,34 @@ The physical parameters are chosen to closely approximate a very small quadrotor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In \autoref{chap:sstpaper}, we introduced the notion of an abstracted Kripke structure which acts as a simplified map, describing how the state-space can be traversed to reach various goal regions. It was shown that the motion planning algorithm \gls{sst}* could be used to incrementally generate trajectories to multiple proposition regions. These solutions could then each be stored as a directed edge in the abstracted Kripke structure, so that the details of the trajectory could be ignored while model checking, thereby greatly improving efficiency. The primary benefit, however, is being able to determine a sequence of trajectories that together can be used to satisfy a temporal logic specification. 
+In \autoref{chap:sstpaper}, we introduced the notion of an abstracted Kripke structure which acts as a simplified map, describing how the state-space can be traversed to reach various goal regions. It was shown that the motion planning algorithm \gls{sst}* could be used to incrementally generate trajectories to multiple proposition regions\footnote{Recall that a proposition region consists of the set of states $\brackets{\pi_i}$, where $\pi_i \in \abs{\Pi_+(\Phi)}$, as defined in \autoref{chap:sstpaper:main}}. These solutions could then each be stored as a directed edge in the abstracted Kripke structure, so that the details of the trajectory could be ignored while model checking, thereby greatly improving efficiency. The primary benefit, however, is being able to determine a sequence of trajectories that together can be used to satisfy a temporal logic specification. 
 
-% TODO: why am I not using the method from Chap 3?
-This section will use the same concept of an abstracted Kripke structure to construct solution trajectories for a quadrotor system. We will apply the method described in the last section, but instead using the \texttt{kinoFMT} planner with path smoothing, to quickly determine a high-quality trajectory satisfying a given \mucalc{} specification, $\Phi$.
+This section will use the same concept of an abstracted Kripke structure to construct solution trajectories for a quadrotor system. Deviating from the method using the Monte-Carlo approach with \gls{sst}*, we instead use the \texttt{kinoFMT} planner with path smoothing to quickly determine a high-quality trajectory satisfying a given \mucalc{} specification, $\Phi$.
 
 \subsection{Algorithm} 
 
-The meta-algorithm we propose is similar to \texttt{kinoSpecPlan} (\autoref{alg:kinospecplan}). Differences arise due to the fact that \texttt{kinoFMT} is not an incremental algorithm; instead, samples are drawn during the offline phase so that the \texttt{Cost} look-up table can be precomputed. Another key difference is that, unlike \gls{sst}, the use of \texttt{kinoFMT} assumes there is a way to locally steer between points, and the smoothing polynomials can be used to exactly traverse desired waypoints. Since it is only possible to reach sampled states with this method, there are a finite number of possible goal states for any given proposition region. We will use this fact to our advantage, reducing some of the uncertainty arising from tracking in the method presented in \autoref{chap:sstpaper}.
+The meta-algorithm we propose is similar to \texttt{KinoSpecPlan} (\autoref{alg:kinospecplan}). Differences arise due to the fact that \texttt{kinoFMT} is not an incremental algorithm; instead, samples are drawn during the offline phase so that the \texttt{Cost} look-up table can be precomputed. Another key difference is that, unlike \gls{sst}*, the use of \texttt{kinoFMT} assumes there is a way to locally steer between points, and the smoothing polynomials can be used to exactly traverse desired waypoints. Since it is only possible to reach sampled states with this method, there are a finite number of possible goal states for any given proposition region. We will use this fact to our advantage, reducing some of the uncertainty arising from tracking in the method presented in \autoref{chap:sstpaper}.
 
-To begin, states are sampled from each of the proposition regions of state space until each such region contains exactly $m$ samples. (Recall that a proposition region consists of the set of states $\brackets{\pi_i}$, where $\pi_i \in \abs{\Pi_+(\Phi)}$, as defined in \autoref{chap:sstpaper:main}). We first plan trajectories from the initial state to each of the proposition regions. Then, for each of the proposition regions, repeat this process, planning from each of the $m$ samples of the region to every other proposition region. In the end, there will be at most $mn(n-1)$ trajectories between proposition regions, and $n$ possible trajectories from the initial state.
+To begin, states are sampled from each of the proposition regions of state space until each such region contains exactly $m$ samples. We first plan trajectories from the initial state to each of the proposition regions. Then, for each of the proposition regions, repeat this process, planning from each of the $m$ samples of the region to every other proposition region. In the end, there will be at most $mn(n-1)$ trajectories between proposition regions, and $n$ possible trajectories from the initial state. See \autoref{quad:fig:quad_paths} for an illustrative example.
 
-Next, we construct the abstracted Kripke structure. A directed edge is added between proposition regions $\brackets{\pi_i}, \brackets{\pi_j}$ only if each of the $m$ samples in $\brackets{\pi_i}$ successfully finds a trajectory to $\brackets{\pi_j}$. % TODO
+Next, we construct the abstracted Kripke structure (\autoref{quad:fig:quad_abstract_kripke}). A directed edge is added between proposition regions $\brackets{\pi_i}, \brackets{\pi_j}$ only if each of the $m$ samples in $\brackets{\pi_i}$ successfully finds a trajectory to $\brackets{\pi_j}$. In this way, we guarantee that no matter which sample we start from in $\brackets{\pi_i}$, there will always be a path to $\brackets{\pi_j}$.
 
-The idea remains the same whether the proposition regions are known online or offline, although repeating the entire real-time framework can become costly as the number of required \gls{obvp} solutions grows. If the proposition regions are known beforehand, the $m$ samples of each region can be added to the existing tree, and all of the necessary \gls{obvp} solutions can be found offline. In this way, the online planner need only connect the initial state to the existing graph. The bottleneck in this case becomes running \texttt{kinoFMT} up to $n+mn(n-1)$ times. Janson et al.\ showed in~\cite{Janson2015} that \gls{fmt} has time complexity $O(n\log(n))$, and by the same arguments, \texttt{kinoFMT} has the same computational complexity. Altogether, the time complexity contributed by calls of \texttt{kinoFMT} in this new framework is $O(mn^3 \log(n))$. Note that path smoothing is required only for those paths which are required in satisfying the deterministic \mucalc{} specification.
+The idea remains the same whether the proposition regions are known online or offline, although repeating the entire real-time framework can become costly as the number of required \gls{obvp} solutions grows. If the proposition regions are known beforehand, the $m$ samples of each region can be added to the existing tree, and all of the necessary \gls{obvp} solutions can be found offline. In this way, the online planner need only connect the initial state to the existing graph without having to connect all of the proposition region states as well. However, not all computation can be done offline as obstacles remain unknown. The bottleneck while online is then caused by running \texttt{kinoFMT} up to $n+mn(n-1)$ times. Janson et al.\ showed in~\cite{Janson2015} that \gls{fmt} has time complexity $O(n\log(n))$, and by the same arguments, \texttt{kinoFMT} has the same computational complexity. Altogether, the time complexity contributed by calls of \texttt{kinoFMT} in this new framework is $O(mn^3 \log(n))$, which can be expensive if there are many positively-appearing propositions in specification $\Phi$. Note that path smoothing is required only for those paths which are required in satisfying the specification.
 
+\begin{figure}[hb]
+    \hspace*{-1cm}
+    \centering
+    \includegraphics[scale=0.55]{./figures/quad_paths}
+    \caption[Quadrotor planning with temporal logic specifications]{This diagram illustrates the set of solution trajectories found when attempting to reach from every sampled node of each proposition region (and initial state $x_{init}$) to all other proposition regions. We use $m=2$ samples in this example.}
+\label{quad:fig:quad_paths}
+\end{figure}
 
+\begin{figure}[ht]
+    \hspace*{-0.6cm}
+    \centering
+    \includegraphics[scale=0.6]{./figures/quad_abstract_kripke}
+    \caption[Abstracted Kripke structure for quadrotor paths]{Shown here is the abstracted Kripke structure based on the trajectories found in \autoref{quad:fig:quad_paths}. Note that an edge is only included when a solution is found from all samples of a given region to another particular region.}
+\label{quad:fig:quad_abstract_kripke}
+\end{figure}
 
-% TODO
+It remains to determine whether or not the abstracted Kripke structure satisfies the given deterministic \mucalc{} specification. To this end, we once again use the local model checking algorithm from \autoref{chap:sstpaper} (\autoref{alg:modelchecking}). Once the appropriate set of transitions is determined, path smoothing can be applied. As we have not discussed how to generate smooth closed curves, which arise when any cycles are required in satisfying the specification, it suffices to plan each segment of the plan individually. At this point, the tracking controller from \autoref{quad:eqn:control_law} can be used to follow the proposed (possibly infinite) path. The quadrotor travels to the first proposition region, arriving at one of $m$ samples, and since each is guaranteed to have a known trajectory to the next destination, the quadrotor simply tracks the appropriate smooth path, and the process repeats as necessary. Note that this algorithm is reactive, and any newly appearing obstacles may necessitate finding new sets of waypoints to avoid collisions.

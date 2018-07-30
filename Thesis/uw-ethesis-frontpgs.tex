@@ -14,7 +14,7 @@
         \vspace*{1.0cm}
 
         \Huge
-        {\bf Kinodynamic Motion Planning with $\mu$-Calculus Specifications}
+        {\bf Kinodynamic Planning with $\mu$-Calculus Specifications}
 
         \vspace*{1.0cm}
 
@@ -113,23 +113,18 @@ I understand that my thesis may be made electronically available to the public.
 % ---------------
 
 \begin{center}\textbf{Abstract}\end{center}
+Motion planning problems involve determining appropriate control inputs to guide a system towards a desired endpoint. Sampling-based motion planning was then developed as a technique for discretizing the state space of systems with complex environments. This makes the sampling-based method especially useful in robotics, where robots are expected to perform tasks in unknown, changing, or cluttered environments. On the other hand, temporal logic presents a means of prescribing the desired behaviour of a system. In the area of formal methods, researchers seek to solve problems in such a way that synthesized solutions provably satisfy a given temporal logic specification. In this thesis, we investigate combining the flexibility of sampling-based planning with the ability to specify the high-level behaviour of an autonomous system with the temporal logic known as \mucalc{}.
 
-This is the abstract.
+While using temporal logic specifications with motion planning has been heavily researched, reliance on an available steering function is often impractical and suited only to basic problems with linear dynamics. This is because a steering function is a solution to an optimal two-point boundary value problem (OBVP); to our knowledge, it is nearly impossible to find an analytic solution to such problems in many cases. Addressing this issue, we have developed a means of using the motion planning algorithm SST* in combination with a local model checking procedure to solve kinodynamic planning problems with deterministic \mucalc{} specifications without using a steering function. The procedure involves combining only the most pertinent information from multiple Kripke structures in order to create one abstracted Kripke structure storing the best paths to all possible proposition regions of the state-space. A linear-quadratic regulator (LQR) feedback control policy is then used to track these best paths, effectively connecting the trajectories found from multiple Kripke structures. Simulations demonstrate that it is possible to satisfy a complex liveness specification for infinitely often reaching specified regions of state-space using only forward propagation.
 
-Vulputate minim vel consequat praesent at vel iusto et, ex delenit, esse euismod luptatum augue ut sit et eu vel augue autem feugiat, quis ad dolore. Nulla vel, laoreet lobortis te commodo elit qui aliquam enim ex iriure ea ullamcorper nostrud lorem, lorem laoreet eu ex ut vel in zzril wisi quis. Nisl in autem praesent dignissim, sit vel aliquam at te, vero dolor molestie consequat.
-
-Tation iriure sed wisi feugait odio dolore illum duis in accumsan velit illum consequat consequat ipsum molestie duis duis ut ullamcorper. Duis exerci odio blandit vero dolore eros odio amet et nisl in nostrud consequat iusto eum suscipit autem vero. Iusto dolore exerci, ut erat ex, magna in facilisis duis amet feugait augue accumsan zzril delenit aliquip dignissim at. Nisl molestie nibh, vulputate feugait nibh luptatum ea delenit nostrud dolore minim veniam odio volutpat delenit nulla accumsan eum vero ullamcorper eum. Augue velit veniam, dolor, exerci ea feugiat nulla molestie, veniam nonummy nulla dolore tincidunt, consectetuer dolore nulla ipsum commodo.
-
-At nostrud lorem, lorem laoreet eu ex ut vel in zzril wisi. Suscipit consequat in autem praesent dignissim, sit vel aliquam at te, vero dolor molestie consequat eros tation facilisi diam dolor. Odio luptatum dolor in facilisis et facilisi et adipiscing suscipit eu iusto praesent enim, euismod consectetuer feugait duis. Odio veniam et iriure ad qui nonummy aliquip at qui augue quis vel diam, nulla. Autem exerci tation iusto, hendrerit et, tation esse consequat ut velit te dignissim eu esse eros facilisis lobortis, lobortis hendrerit esse dignissim nisl. Nibh nulla minim vel consequat praesent at vel iusto et, ex delenit, esse euismod luptatum.
-
-Ut eum vero ullamcorper eum ad velit veniam, dolor, exerci ea feugiat nulla molestie, veniam nonummy nulla. Elit tincidunt, consectetuer dolore nulla ipsum commodo, ut, at qui blandit suscipit accumsan feugiat vel praesent. In dolor, ea elit suscipit nisl blandit hendrerit zzril. Sit enim, et dolore blandit illum enim duis feugiat velit consequat iriure sed wisi feugait odio dolore illum duis. Et accumsan velit illum consequat consequat ipsum molestie duis duis ut ullamcorper nulla exerci odio blandit vero dolore eros odio amet et.
+We proceed to repurpose this tool for real-time quadrotor motion planning with temporal logic specifications. The dynamical system is derived, and a real-time planning framework is presented based on a variant of the FMT* planning algorithm. Despite requiring a steering function, an argument is presented which allows finding OBVP solutions only for an approximation of the full dynamics. The notion of an abstracted Kripke structure is then applied in the context of quadrotor kinodynamic planning, allowing for rapid model checking and ensuring high-quality feasible solutions satisfying a given deterministic \mucalc{} specification.
 
 \cleardoublepage
 
 % A C K N O W L E D G E M E N T S
 % -------------------------------
 
-\begin{center}\textbf{Acknowledgements}\end{center}
+\begin{center}\textbf{Acknowledgments}\end{center}
 
 Many thanks to my ever-supportive and helpful supervisor, Jun Liu. Your positivity and guidance gave me the motivation I needed to succeed, while allowing me the independence to follow the research path that suited me best. Thank you also to all of the members of the Hybrid Systems Lab. Yinan Li, Milad Farsi, Chuanzheng Wang, Riley Brooks, and Kevin Church, you have all contributed so much to my Master's experience with insightful conversation, interesting presentations, and utmost kindness.
 \cleardoublepage
@@ -139,7 +134,7 @@ Many thanks to my ever-supportive and helpful supervisor, Jun Liu. Your positivi
 
 \begin{center}\textbf{Dedication}\end{center}
 
-This is dedicated to my parents and to Ma\v{s}a: you have made my life an absolute pleasure during my graduate studies.
+This is dedicated to my officially-expanded family and to Ma\v{s}a: you have made my journey through graduate studies an absolute pleasure.
 \cleardoublepage
 
 % T A B L E   O F   C O N T E N T S

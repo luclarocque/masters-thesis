@@ -3,33 +3,20 @@
 
 \chapter{Conclusions}\label{chap:conc}
 
+In this thesis, we offered motivation in the form of real-world applications for the study of motion planning and the use of temporal logic. Upon delving into the mathematical background of \mucalc{} and outlining the key features and uses of the motion planning algorithms \gls{sst}* and \gls{fmt}, we proposed two frameworks for kinodynamic planning with temporal logic specifications.
 
+The method presented in \autoref{chap:sstpaper} is a novel use of SST*, a kinodynamic planning algorithm that avoids reliance on a steering function, and \mucalc{} model checking. We proceed to develop the idea of an abstracted Kripke structure to determine satisfaction of deterministic \mucalc{} specifications. Notably, construction of the abstracted Kripke structure is performed by creating multiple Kripke structures and merging the most cost-efficient solutions into one structure, and the appropriate trajectories satisfying the given specification are tracked using an LQR feedback control policy. Altogether, this is a general approach for generating trajectories satisfying a deterministic \mucalc{} proposition. 
 
-CHECKLIST:\\
-\begin{itemize}
-    \item Quadrotor Simulations (Chapter 4)
-    \item Abstracted Kripke Structures for Online Planning (Chapter 4)
-    \item Contributions (Chapter 1)
-    % \item Overview (Chapter 1)
-    \item Abstract (Front Matter)
-    \item Future Work (can move some from Chapter 3) (Chapter 5)
-    \item Formatting (especially figure positions)
-\end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%
-% From end of SST paper chapter
-The method presented here is a novel use of SST*, a kinodynamic planning algorithm that avoids reliance on a steering function, and \mucalc{} model checking that uses an abstracted Kripke structure to determine satisfaction of deterministic \mucalc{} specifications. Construction of the abstracted Kripke structure is performed by creating multiple Kripke structures and merging the most cost-efficient solutions into one structure, and the appropriate trajectories satisfying the given specification are tracked using an LQR feedback control policy.
-
-
-%%%%%%%%%%%%%%%%%
-
+Meanwhile, the second approach is tailored to the application of quadrotor motion planning, although in theory a very similar methodology could be applied to any differentially flat system. Upon determining a set of flat output variables, we use double-integrator dynamics as an approximation on which to precompute approximate optimal cost and flight durations on a fixed set of random samples of the configuration space. This information is then stored in a look-up table for use online, where the \texttt{kinoFMT} planning algorithm is used to determine least-cost waypoints along which the quadrotor can travel to reach the goal. Finally, minimum-snap polynomial trajectories are calculated to construct a smooth path, and the result is tracked with feedback controller. Using an abstracted Kripke structure, we can store smooth trajectories between pairs of proposition regions and use a local model checker to determine the paths necessary to satisfy a given deterministic \mucalc{} specification. The result can then be tracked using the proposed controller. One significant advantage of this approach is that planning time is reduced to mere seconds, especially if the proposition regions are known a priori so that much of the time-consuming computation may be done offline. 
 
 
 \section{Future Work}
 
-Schoellig et al.\ at the University of Toronto tend to focus on path-following rather than trajectory tracking.
 
 This research opens many avenues for future work. Investigation into other types of feedback controllers may help to improve tracking when applying the \gls{sst} method from \autoref{chap:sstpaper}, especially for nonlinear systems. Tracking also poses a problem for collision avoidance, since despite guaranteeing a collision-free trajectory with an appropriate \mucalc{} specification, tracking errors may yet cause collisions. This issue is partially addressed with the real-time framework for quadrotor kinodynamic planning in \autoref{chap:quad} which can detect collisions and plan a new trajectory. However, the time complexity for planning grows quadratically with the number of proposition regions, rendering the real-time planning task infeasible for specifications involving many atomic propositions.
 
-Furthermore, completeness of our method remains to be proven given the multilayer approach, as SST* and \texttt{kinoFMT} guarantee (probabilistic) completeness for each individual Kripke structure, however it is uncertain what can be said of the use of multiple Kripke structures in satisfying a single specification.
+Further on the topic of quadrotor kinodynamic planning with temporal logic specifications, we recognize that the proposed method is very conservative. We require that every sample of a proposition region must have a solution to another given region in order to add the corresponding directed edge to the abstracted Kripke structure. This constraint provides the guarantee that a path will always be found, independent of the sample at which the quadrotor arrives. On the other hand, it may be possible to locally steer towards a sample state for which there is a solution, and proceed along the known trajectory from there. This could conceivably be accomplished by prepending the set of waypoints from a sample with a known solution with the state for which a solution was not found. On the other hand, obstacles, significant differences in speed, and a number of other factors introduce difficulties. One further improvement to this planning method lies in developing a method for constructing closed curves when smoothing over the set of paths required to satisfy a given specification. In this way, individual trajectories need not be tracked, and a truly infinite-path solution can be immediately obtained.
+
+Incidentally, Schoellig et al.\ at the University of Toronto tend to focus on path-following rather than trajectory tracking~\cite{Greeff2018,Ostafew2015}. This is because trajectory tracking involves maintaining pace with a time-parameterized trajectory, so that any disturbance which cause the system to fall behind requires catching up in a potentially undesirable manner. In path-following, only a geometric path is known, and the system merely follows along the path at a prescribed velocity. With this method, disturbances merely cause the system to return to the nearest point along the geometric path. Path-following is therefore desirable for ensuring predictable behaviour, and seems to present a possible improvement over the time-parameterized smooth polynomials from \autoref{chap:quad}.
+
+Lastly, completeness of our method remains to be proven given the multilayer approach, as SST* and \texttt{kinoFMT} guarantee (probabilistic) completeness for each individual Kripke structure, however it is uncertain what can be said of the use of multiple Kripke structures in satisfying a single specification.

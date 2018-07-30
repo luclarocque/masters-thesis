@@ -25,6 +25,18 @@ Amit Bhatia, Lydia~E. Kavraki, and Moshe~Y. Vardi.
 \newblock {\em Proceedings - IEEE International Conference on Robotics and
   Automation}, pages 2689--2696, 2010.
 
+\bibitem{Cleaveland1993}
+Rance Cleaveland and Bernhard Steffen.
+\newblock {A linear-time model-checking algorithm for the alternation-free
+  modal mu-calculus}.
+\newblock {\em Formal Methods in System Design}, 2(2):121--147, 1993.
+
+\bibitem{Doherty2013}
+Patrick Doherty, Fredrik Heintz, and Jonas Kvarnstr{\"{o}}m.
+\newblock {High-Level Mission Specification and Planning for Collaborative
+  Unmanned Aircraft Systems Using Delegation}.
+\newblock {\em Unmanned Systems}, 01(01):75--119, 2013.
+
 \bibitem{Emerson1991}
 E.~Allen Emerson and Charanjit~S. Jutla.
 \newblock {Tree automata, mu-calculus and determinacy}.
@@ -36,6 +48,12 @@ E.~Allen Emerson, Charanjit~S. Jutla, and A.~Prasad Sistla.
 \newblock {\em {On model checking for the $\mu$-calculus and its fragments}},
   volume 258.
 \newblock 1999.
+
+\bibitem{Emerson1986}
+E.~Allen Emerson and Chin-Laung Lei.
+\newblock {Efficient Model Checking in Fragments of the Propositional
+  Mu-Calculus}.
+\newblock {\em IEEE}, 1986.
 
 \bibitem{Fliess1995}
 Michel Fliess, Jean Levine, Philippe Martin, and Pierre Rouchon.
@@ -189,6 +207,12 @@ Daniel Mellinger and Vijay Kumar.
 \newblock {Minimum snap trajectory generation and control for quadrotors}.
 \newblock {\em Proceedings - IEEE International Conference on Robotics and
   Automation}, pages 2520--2525, 2011.
+
+\bibitem{Ostafew2015}
+Chris~J. Ostafew, Angela~P. Schoellig, Timothy~D. Barfoot, and Jack Collier.
+\newblock {Learning-based Nonlinear Model Predictive Control to Improve
+  Vision-based Mobile Robot Path Tracking}.
+\newblock {\em Journal of Field Robotics}, 33(1):133--152, 2015.
 
 \bibitem{Richter2016}
 Charles Richter, Adam Bry, and Nicholas Roy.
